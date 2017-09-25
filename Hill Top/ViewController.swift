@@ -37,6 +37,8 @@ class ViewController: NSViewController {
     
 
 
+    @IBOutlet var Scurrper: NSTextField!
+    @IBOutlet var Tcurrper: NSTextField!
     @IBOutlet var Studentbutton: NSButtonCell!
     @IBOutlet var TeacherButton: NSButton!
     @IBOutlet var TeacherPortal: NSButton!
@@ -54,10 +56,13 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateTimeComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
-        var hour=dateTimeComponents.hour
-        var minute=dateTimeComponents.minute
+        var hour=dateTimeComponents.hour!
+        var minute=dateTimeComponents.minute!
 
-        
+        if hour>Int(p1b[0])! && minute>Int(p1b[1])! && hour<Int(p1e[0])! && minute < Int(p1b[1])!  {
+                Scurrper.stringValue="First Period"
+                Tcurrper.stringValue="First Period"
+        }
 
     }
     @objc private func buttonClicked() {

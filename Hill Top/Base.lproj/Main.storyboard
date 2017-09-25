@@ -286,7 +286,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ley-gj-LDF">
-                                <rect key="frame" x="29" y="673" width="123" height="32"/>
+                                <rect key="frame" x="262" y="632" width="123" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Access Portal" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ejF-Mp-85e">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -296,10 +296,20 @@
                                     <action selector="PortalS:" target="xid-hy-HKm" id="aFi-1B-6Cb"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUb-b5-zdA">
+                                <rect key="frame" x="266" y="668" width="268" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Current Period" placeholderString="Current Period" id="h1G-mK-aVr">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="PortalS" destination="Ley-gj-LDF" id="7Tg-Tp-CgC"/>
+                        <outlet property="Scurrper" destination="EUb-b5-zdA" id="UY7-jm-GKi"/>
                     </connections>
                 </viewController>
                 <customObject id="rQf-SF-26W" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -314,8 +324,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-fc-LrF">
+                                <rect key="frame" x="266" y="668" width="268" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Current Period" placeholderString="Current Period" id="PYK-O1-1Xj">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7W-Za-2wt">
-                                <rect key="frame" x="23" y="683" width="123" height="32"/>
+                                <rect key="frame" x="262" y="632" width="123" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Access Portal" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qb6-ml-Tr5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -328,6 +347,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="Tcurrper" destination="aa9-fc-LrF" id="3eU-Qi-YRt"/>
                         <outlet property="TeacherPortal" destination="c7W-Za-2wt" id="Raq-oJ-z3R"/>
                     </connections>
                 </viewController>
