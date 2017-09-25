@@ -14,6 +14,8 @@
 		21C513D41F791F6F002163F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C513D21F791F6F002163F5 /* Main.storyboard */; };
 		21C513DF1F791F6F002163F5 /* Hill_TopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513DE1F791F6F002163F5 /* Hill_TopTests.swift */; };
 		21C513EA1F791F6F002163F5 /* Hill_TopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513E91F791F6F002163F5 /* Hill_TopUITests.swift */; };
+		21C513F91F79201F002163F5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C513F81F79201F002163F5 /* Cocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		21C513FD1F7926FF002163F5 /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513FC1F7926FF002163F5 /* TeacherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		21C513E51F791F6F002163F5 /* Hill TopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hill TopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C513E91F791F6F002163F5 /* Hill_TopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hill_TopUITests.swift; sourceTree = "<group>"; };
 		21C513EB1F791F6F002163F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21C513F81F79201F002163F5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		21C513FC1F7926FF002163F5 /* TeacherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C513F91F79201F002163F5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				21C513DD1F791F6F002163F5 /* Hill TopTests */,
 				21C513E81F791F6F002163F5 /* Hill TopUITests */,
 				21C513C71F791F6E002163F5 /* Products */,
+				21C513F71F79201F002163F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +107,7 @@
 				21C513CB1F791F6F002163F5 /* ViewController.swift */,
 				21C513D01F791F6F002163F5 /* Assets.xcassets */,
 				21C513D21F791F6F002163F5 /* Main.storyboard */,
+				21C513FC1F7926FF002163F5 /* TeacherViewController.swift */,
 				21C513D51F791F6F002163F5 /* Info.plist */,
 				21C513CD1F791F6F002163F5 /* Hill_Top.xcdatamodeld */,
 			);
@@ -123,6 +130,14 @@
 				21C513EB1F791F6F002163F5 /* Info.plist */,
 			);
 			path = "Hill TopUITests";
+			sourceTree = "<group>";
+		};
+		21C513F71F79201F002163F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21C513F81F79201F002163F5 /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C513CC1F791F6F002163F5 /* ViewController.swift in Sources */,
+				21C513FD1F7926FF002163F5 /* TeacherViewController.swift in Sources */,
 				21C513CA1F791F6F002163F5 /* AppDelegate.swift in Sources */,
 				21C513CF1F791F6F002163F5 /* Hill_Top.xcdatamodeld in Sources */,
 			);
@@ -406,6 +422,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Hill Top/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-Top";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -419,6 +436,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Hill Top/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-Top";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -502,6 +520,7 @@
 				21C513F01F791F6F002163F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21C513F11F791F6F002163F5 /* Build configuration list for PBXNativeTarget "Hill TopTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +529,7 @@
 				21C513F31F791F6F002163F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21C513F41F791F6F002163F5 /* Build configuration list for PBXNativeTarget "Hill TopUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +538,7 @@
 				21C513F61F791F6F002163F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
