@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21C513CA1F791F6F002163F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513C91F791F6F002163F5 /* AppDelegate.swift */; };
+		21C513CC1F791F6F002163F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513CB1F791F6F002163F5 /* ViewController.swift */; };
+		21C513CF1F791F6F002163F5 /* Hill_Top.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21C513CD1F791F6F002163F5 /* Hill_Top.xcdatamodeld */; };
+		21C513D11F791F6F002163F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C513D01F791F6F002163F5 /* Assets.xcassets */; };
+		21C513D41F791F6F002163F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C513D21F791F6F002163F5 /* Main.storyboard */; };
+		21C513DF1F791F6F002163F5 /* Hill_TopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513DE1F791F6F002163F5 /* Hill_TopTests.swift */; };
+		21C513EA1F791F6F002163F5 /* Hill_TopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513E91F791F6F002163F5 /* Hill_TopUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21C513DB1F791F6F002163F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21C513BE1F791F6E002163F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21C513C51F791F6E002163F5;
+			remoteInfo = "Hill Top";
+		};
+		21C513E61F791F6F002163F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21C513BE1F791F6E002163F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21C513C51F791F6E002163F5;
+			remoteInfo = "Hill Top";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21C513C61F791F6E002163F5 /* Hill Top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hill Top.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21C513C91F791F6F002163F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21C513CB1F791F6F002163F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21C513CE1F791F6F002163F5 /* Hill_Top.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hill_Top.xcdatamodel; sourceTree = "<group>"; };
+		21C513D01F791F6F002163F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21C513D31F791F6F002163F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21C513D51F791F6F002163F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21C513DA1F791F6F002163F5 /* Hill TopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hill TopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21C513DE1F791F6F002163F5 /* Hill_TopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hill_TopTests.swift; sourceTree = "<group>"; };
+		21C513E01F791F6F002163F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21C513E51F791F6F002163F5 /* Hill TopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hill TopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21C513E91F791F6F002163F5 /* Hill_TopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hill_TopUITests.swift; sourceTree = "<group>"; };
+		21C513EB1F791F6F002163F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21C513C31F791F6E002163F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21C513D71F791F6F002163F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21C513E21F791F6F002163F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21C513BD1F791F6E002163F5 = {
+			isa = PBXGroup;
+			children = (
+				21C513C81F791F6E002163F5 /* Hill Top */,
+				21C513DD1F791F6F002163F5 /* Hill TopTests */,
+				21C513E81F791F6F002163F5 /* Hill TopUITests */,
+				21C513C71F791F6E002163F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21C513C71F791F6E002163F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21C513C61F791F6E002163F5 /* Hill Top.app */,
+				21C513DA1F791F6F002163F5 /* Hill TopTests.xctest */,
+				21C513E51F791F6F002163F5 /* Hill TopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21C513C81F791F6E002163F5 /* Hill Top */ = {
+			isa = PBXGroup;
+			children = (
+				21C513C91F791F6F002163F5 /* AppDelegate.swift */,
+				21C513CB1F791F6F002163F5 /* ViewController.swift */,
+				21C513D01F791F6F002163F5 /* Assets.xcassets */,
+				21C513D21F791F6F002163F5 /* Main.storyboard */,
+				21C513D51F791F6F002163F5 /* Info.plist */,
+				21C513CD1F791F6F002163F5 /* Hill_Top.xcdatamodeld */,
+			);
+			path = "Hill Top";
+			sourceTree = "<group>";
+		};
+		21C513DD1F791F6F002163F5 /* Hill TopTests */ = {
+			isa = PBXGroup;
+			children = (
+				21C513DE1F791F6F002163F5 /* Hill_TopTests.swift */,
+				21C513E01F791F6F002163F5 /* Info.plist */,
+			);
+			path = "Hill TopTests";
+			sourceTree = "<group>";
+		};
+		21C513E81F791F6F002163F5 /* Hill TopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				21C513E91F791F6F002163F5 /* Hill_TopUITests.swift */,
+				21C513EB1F791F6F002163F5 /* Info.plist */,
+			);
+			path = "Hill TopUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21C513C51F791F6E002163F5 /* Hill Top */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21C513EE1F791F6F002163F5 /* Build configuration list for PBXNativeTarget "Hill Top" */;
+			buildPhases = (
+				21C513C21F791F6E002163F5 /* Sources */,
+				21C513C31F791F6E002163F5 /* Frameworks */,
+				21C513C41F791F6E002163F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hill Top";
+			productName = "Hill Top";
+			productReference = 21C513C61F791F6E002163F5 /* Hill Top.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21C513D91F791F6F002163F5 /* Hill TopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21C513F11F791F6F002163F5 /* Build configuration list for PBXNativeTarget "Hill TopTests" */;
+			buildPhases = (
+				21C513D61F791F6F002163F5 /* Sources */,
+				21C513D71F791F6F002163F5 /* Frameworks */,
+				21C513D81F791F6F002163F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21C513DC1F791F6F002163F5 /* PBXTargetDependency */,
+			);
+			name = "Hill TopTests";
+			productName = "Hill TopTests";
+			productReference = 21C513DA1F791F6F002163F5 /* Hill TopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		21C513E41F791F6F002163F5 /* Hill TopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21C513F41F791F6F002163F5 /* Build configuration list for PBXNativeTarget "Hill TopUITests" */;
+			buildPhases = (
+				21C513E11F791F6F002163F5 /* Sources */,
+				21C513E21F791F6F002163F5 /* Frameworks */,
+				21C513E31F791F6F002163F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21C513E71F791F6F002163F5 /* PBXTargetDependency */,
+			);
+			name = "Hill TopUITests";
+			productName = "Hill TopUITests";
+			productReference = 21C513E51F791F6F002163F5 /* Hill TopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21C513BE1F791F6E002163F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Justin Keller";
+				TargetAttributes = {
+					21C513C51F791F6E002163F5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					21C513D91F791F6F002163F5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 21C513C51F791F6E002163F5;
+					};
+					21C513E41F791F6F002163F5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 21C513C51F791F6E002163F5;
+					};
+				};
+			};
+			buildConfigurationList = 21C513C11F791F6E002163F5 /* Build configuration list for PBXProject "Hill Top" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21C513BD1F791F6E002163F5;
+			productRefGroup = 21C513C71F791F6E002163F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21C513C51F791F6E002163F5 /* Hill Top */,
+				21C513D91F791F6F002163F5 /* Hill TopTests */,
+				21C513E41F791F6F002163F5 /* Hill TopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21C513C41F791F6E002163F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21C513D11F791F6F002163F5 /* Assets.xcassets in Resources */,
+				21C513D41F791F6F002163F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21C513D81F791F6F002163F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21C513E31F791F6F002163F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21C513C21F791F6E002163F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21C513CC1F791F6F002163F5 /* ViewController.swift in Sources */,
+				21C513CA1F791F6F002163F5 /* AppDelegate.swift in Sources */,
+				21C513CF1F791F6F002163F5 /* Hill_Top.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21C513D61F791F6F002163F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21C513DF1F791F6F002163F5 /* Hill_TopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21C513E11F791F6F002163F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21C513EA1F791F6F002163F5 /* Hill_TopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21C513DC1F791F6F002163F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21C513C51F791F6E002163F5 /* Hill Top */;
+			targetProxy = 21C513DB1F791F6F002163F5 /* PBXContainerItemProxy */;
+		};
+		21C513E71F791F6F002163F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21C513C51F791F6E002163F5 /* Hill Top */;
+			targetProxy = 21C513E61F791F6F002163F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21C513D21F791F6F002163F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21C513D31F791F6F002163F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21C513EC1F791F6F002163F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		21C513ED1F791F6F002163F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		21C513EF1F791F6F002163F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Hill Top/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-Top";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		21C513F01F791F6F002163F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Hill Top/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-Top";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		21C513F21F791F6F002163F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Hill TopTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-TopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hill Top.app/Contents/MacOS/Hill Top";
+			};
+			name = Debug;
+		};
+		21C513F31F791F6F002163F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Hill TopTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-TopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hill Top.app/Contents/MacOS/Hill Top";
+			};
+			name = Release;
+		};
+		21C513F51F791F6F002163F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Hill TopUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-TopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Hill Top";
+			};
+			name = Debug;
+		};
+		21C513F61F791F6F002163F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Hill TopUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-TopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Hill Top";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21C513C11F791F6E002163F5 /* Build configuration list for PBXProject "Hill Top" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21C513EC1F791F6F002163F5 /* Debug */,
+				21C513ED1F791F6F002163F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21C513EE1F791F6F002163F5 /* Build configuration list for PBXNativeTarget "Hill Top" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21C513EF1F791F6F002163F5 /* Debug */,
+				21C513F01F791F6F002163F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		21C513F11F791F6F002163F5 /* Build configuration list for PBXNativeTarget "Hill TopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21C513F21F791F6F002163F5 /* Debug */,
+				21C513F31F791F6F002163F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		21C513F41F791F6F002163F5 /* Build configuration list for PBXNativeTarget "Hill TopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21C513F51F791F6F002163F5 /* Debug */,
+				21C513F61F791F6F002163F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		21C513CD1F791F6F002163F5 /* Hill_Top.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				21C513CE1F791F6F002163F5 /* Hill_Top.xcdatamodel */,
+			);
+			currentVersion = 21C513CE1F791F6F002163F5 /* Hill_Top.xcdatamodel */;
+			path = Hill_Top.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 21C513BE1F791F6E002163F5 /* Project object */;
+}
