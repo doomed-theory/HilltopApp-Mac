@@ -63,6 +63,10 @@ class ViewController: NSViewController {
                 Scurrper.stringValue="First Period"
                 Tcurrper.stringValue="First Period"
         }
+        else if hour>Int(p2b[0])! && minute>Int(p2b[1])! && hour<Int(p2e[0])! && minute < Int(p2b[1])!  {
+            Scurrper.stringValue="Second Period"
+            Tcurrper.stringValue="Second Period"
+        }
 
     }
     @objc private func buttonClicked() {
