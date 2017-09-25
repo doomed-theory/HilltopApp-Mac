@@ -67,6 +67,10 @@ class ViewController: NSViewController {
             Scurrper.stringValue="Second Period"
             Tcurrper.stringValue="Second Period"
         }
+        else if hour>Int(pcb[0])! && minute>Int(pcb[1])! && hour<Int(pcb[0])! && minute < Int(bcb[1])!  {
+            Scurrper.stringValue="Community Meeting"
+            Tcurrper.stringValue="Community Meeting"
+        }
 
     }
     @objc private func buttonClicked() {
