@@ -217,7 +217,7 @@
         <!--MainView-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController title="MainView" id="XfG-lQ-9wD" customClass="ViewController" customModule="Hill_Top" sceneMemberID="viewController">
+                <viewController title="MainView" showSeguePresentationStyle="single" id="XfG-lQ-9wD" customClass="ViewController" customModule="Hill_Top" sceneMemberID="viewController">
                     <view key="view" identifier="main" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -291,25 +291,30 @@
                                 <buttonCell key="cell" type="push" title="Access Portal" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ejF-Mp-85e">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">P</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="PortalS:" target="xid-hy-HKm" id="aFi-1B-6Cb"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUb-b5-zdA">
-                                <rect key="frame" x="266" y="668" width="268" height="80"/>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-5K-dAk">
+                                <rect key="frame" x="126" y="632" width="136" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Current Period" placeholderString="Current Period" id="h1G-mK-aVr">
-                                    <font key="font" metaFont="system" size="40"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                                <buttonCell key="cell" type="push" title="Hill Top Calendar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7yN-12-7L2">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">C</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="SCal:" target="xid-hy-HKm" id="pJF-Jy-DNG"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="PortalS" destination="Ley-gj-LDF" id="7Tg-Tp-CgC"/>
-                        <outlet property="Scurrper" destination="EUb-b5-zdA" id="UY7-jm-GKi"/>
                     </connections>
                 </viewController>
                 <customObject id="rQf-SF-26W" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -319,35 +324,42 @@
         <!--View Controller-->
         <scene sceneID="m74-8W-PEt">
             <objects>
-                <viewController id="G5F-TB-h1L" customClass="ViewController" customModule="Hill_Top" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Teach" id="G5F-TB-h1L" customClass="ViewController" customModule="Hill_Top" sceneMemberID="viewController">
                     <view key="view" identifier="teach" wantsLayer="YES" id="Mdh-A1-K7s">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-fc-LrF">
-                                <rect key="frame" x="266" y="668" width="268" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Current Period" placeholderString="Current Period" id="PYK-O1-1Xj">
-                                    <font key="font" metaFont="system" size="40"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7W-Za-2wt">
-                                <rect key="frame" x="262" y="632" width="123" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7W-Za-2wt">
+                                <rect key="frame" x="262" y="601" width="123" height="32"/>
                                 <buttonCell key="cell" type="push" title="Access Portal" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qb6-ml-Tr5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">P</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="PortalT:" target="G5F-TB-h1L" id="4qj-jQ-hLu"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEg-9S-RE2">
+                                <rect key="frame" x="126" y="601" width="136" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Hill Top Calendar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="I6T-fQ-gb3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">C</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="TCal:" target="G5F-TB-h1L" id="5wG-1b-OOl"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="c7W-Za-2wt" firstAttribute="leading" secondItem="Mdh-A1-K7s" secondAttribute="leading" constant="268" id="aU9-eZ-xPU"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="Tcurrper" destination="aa9-fc-LrF" id="3eU-Qi-YRt"/>
                         <outlet property="TeacherPortal" destination="c7W-Za-2wt" id="Raq-oJ-z3R"/>
                     </connections>
                 </viewController>

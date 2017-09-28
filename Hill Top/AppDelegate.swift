@@ -10,11 +10,16 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    func application(_ appliacation: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken: Data) {
+       // self.forwardTokenToServer(token: deviceToken)
+        
+    }
 
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        NSApplication.shared().registerForRemoteNotifications(matching: [NSRemoteNotificationType.alert,.badge])
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

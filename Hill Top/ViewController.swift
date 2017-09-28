@@ -9,36 +9,13 @@
 import Cocoa
 
 class ViewController: NSViewController {
-    let p1b="08:30:00".components(separatedBy: ":")
-    let p1e="09:10:00".components(separatedBy: ":")
-    let p2b="09:10:00".components(separatedBy: ":")
-    let p2e="09:50:00".components(separatedBy: ":")
-    let pcb="09:50:00".components(separatedBy: ":")
-    let pce="10:10:00".components(separatedBy: ":")
-    let p3b="10:10:00".components(separatedBy: ":")
-    let p3e="10:50:00".components(separatedBy: ":")
-    let p4b="10:50:00".components(separatedBy: ":")
-    let p4e="11:30:00".components(separatedBy: ":")
-    let pmb="11:30:00".components(separatedBy: ":")
-    let pme="12:40:00".components(separatedBy: ":")
-    let p5b="12:40:00".components(separatedBy: ":")
-    let p5e="13:20:00".components(separatedBy: ":")
-    let p6b="13:20:00".components(separatedBy: ":")
-    let p6e="14:00:00".components(separatedBy: ":")
-    let p7b="14:00:00".components(separatedBy: ":")
-    let p7e="14:40:00".components(separatedBy: ":")
-    let p8b="14:40:00".components(separatedBy: ":")
-    let p8e="15:20:00".components(separatedBy: ":")
-    let currentDateTime = Date()
-    let userCalendar = Calendar.current
-    let requestedComponents: Set<Calendar.Component> = [
-        .hour,
-        .minute ]
+
     
 
 
-    @IBOutlet var Scurrper: NSTextField!
-    @IBOutlet var Tcurrper: NSTextField!
+    
+
+
     @IBOutlet var Studentbutton: NSButtonCell!
     @IBOutlet var TeacherButton: NSButton!
     @IBOutlet var TeacherPortal: NSButton!
@@ -48,30 +25,16 @@ class ViewController: NSViewController {
     @IBAction func PortalT(_ sender: Any) {
         NSWorkspace.shared().open(NSURL(string: "https://webapps.pcrsoft.com/clue/Teacher-Portal-Login/11576")! as URL)
     }
-    @IBAction func Student(_ sender: Any) {
+    @IBAction func TCal(_ sender: NSButton) {
+        NSWorkspace.shared().open(NSURL(string: "http://hilltopprep.org/calendar")! as URL)
     }
-    @IBAction func Teacher(_ sender: Any) {
+    @IBAction func SCal(_ sender: Any) {
+                NSWorkspace.shared().open(NSURL(string: "http://hilltopprep.org/calendar")! as URL)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dateTimeComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
-        var hour=dateTimeComponents.hour!
-        var minute=dateTimeComponents.minute!
-
-        if hour>Int(p1b[0])! && minute>Int(p1b[1])! && hour<Int(p1e[0])! && minute < Int(p1b[1])!  {
-                Scurrper.stringValue="First Period"
-                Tcurrper.stringValue="First Period"
-        }
-        else if hour>Int(p2b[0])! && minute>Int(p2b[1])! && hour<Int(p2e[0])! && minute < Int(p2b[1])!  {
-            Scurrper.stringValue="Second Period"
-            Tcurrper.stringValue="Second Period"
-        }
-        else if hour>Int(pcb[0])! && minute>Int(pcb[1])! && hour<Int(pcb[0])! && minute < Int(bcb[1])!  {
-            Scurrper.stringValue="Community Meeting"
-            Tcurrper.stringValue="Community Meeting"
-        }
-
     }
     @objc private func buttonClicked() {
         // your code goes here
