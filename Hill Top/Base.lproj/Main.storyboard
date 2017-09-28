@@ -223,7 +223,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-YP-GiQ">
+                            <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-YP-GiQ">
                                 <rect key="frame" x="201" y="390" width="174" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="7gy-NQ-HbE"/>
@@ -238,7 +238,7 @@
                                     <string key="keyEquivalent">T</string>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="Teacher:" target="XfG-lQ-9wD" id="9uw-jq-PBd"/>
+                                    <action selector="Temail:" target="XfG-lQ-9wD" id="y3G-Px-34K"/>
                                     <segue destination="G5F-TB-h1L" kind="show" id="B2n-fx-bW5"/>
                                 </connections>
                             </button>
@@ -308,7 +308,7 @@
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="PortalS:" target="xid-hy-HKm" id="aFi-1B-6Cb"/>
+                                    <action selector="PortalS:" target="xid-hy-HKm" id="1eh-tk-Ynd"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-5K-dAk">
@@ -321,7 +321,7 @@
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="SCal:" target="xid-hy-HKm" id="pJF-Jy-DNG"/>
+                                    <action selector="SCa:" target="xid-hy-HKm" id="cye-nF-WVn"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0U-rS-jBd">
@@ -334,7 +334,7 @@
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="Semail:" target="xid-hy-HKm" id="twW-se-uOO"/>
+                                    <action selector="Semail:" target="xid-hy-HKm" id="z1i-2Q-CUM"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9c-iV-YJ2">
@@ -364,6 +364,18 @@
                                     <segue destination="QCS-wl-35I" kind="show" id="AHu-TU-7Db"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ao-jP-uRs">
+                                <rect key="frame" x="262" y="599" width="123" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Edit Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Gi-UW-I9P">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="schededit:" target="xid-hy-HKm" id="3JQ-f4-UZh"/>
+                                    <segue destination="kfX-ga-FrB" kind="show" id="JtG-eb-5pc"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -375,15 +387,291 @@
             </objects>
             <point key="canvasLocation" x="461" y="1198"/>
         </scene>
+        <!--Sched Edit-->
+        <scene sceneID="lPC-Ym-Jec">
+            <objects>
+                <viewController id="kfX-ga-FrB" customClass="schedEdit" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="HqT-y4-3wy">
+                        <rect key="frame" x="0.0" y="0.0" width="857" height="666"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuR-P7-Zas">
+                                <rect key="frame" x="273" y="588" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="First Period" id="5YA-R2-hHz">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-un-AeH">
+                                <rect key="frame" x="273" y="532" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Second Period" id="fBD-pr-w2a">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="mM9-6w-XRS"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG6-fo-sAH">
+                                <rect key="frame" x="273" y="420" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Third Period" id="shW-zJ-a5o">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="x9B-SO-rHx"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCM-6E-0r8">
+                                <rect key="frame" x="273" y="364" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Fourth Period" id="oSL-SD-idv">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="ZF6-sl-T0N"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWg-xh-tbn">
+                                <rect key="frame" x="273" y="252" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Fifth Period" id="SEi-w7-SvJ">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="K4E-iX-Y2M"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAw-gj-liJ">
+                                <rect key="frame" x="273" y="196" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Sixth Period" id="dsm-hi-SJJ">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="rXk-s5-bc9"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ve3-uZ-Q6m">
+                                <rect key="frame" x="273" y="140" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Seventh Period" id="f42-yF-RSP">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="DpC-BT-fhS"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGg-HV-Yn8">
+                                <rect key="frame" x="273" y="308" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Mentor Period" id="UJD-v8-upR">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="oSW-Po-u49"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8e-5m-huW">
+                                <rect key="frame" x="273" y="476" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Community Meeting" id="VGm-ef-Nbc">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="o2s-JQ-beP"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJf-us-miD">
+                                <rect key="frame" x="273" y="84" width="532" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Activity Period" id="mJn-qb-o4B">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="u2G-7c-njc"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgV-kO-6t7">
+                                <rect key="frame" x="112" y="588" width="143" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="8:30-9:10" placeholderString="8:30-9:10" id="vMh-jQ-GkY">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="NhH-Xc-ECD"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oro-iT-0xS">
+                                <rect key="frame" x="112" y="532" width="143" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="9:10-9:50" placeholderString="9:10-9:50" id="SRa-Cr-r1z">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="j12-is-FFP"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsS-Qd-aiC">
+                                <rect key="frame" x="112" y="476" width="156" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="9:50-10:10" placeholderString="9:50-10:10" id="p61-dz-NEq">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="EU8-q5-lyA"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGS-Qo-1ys">
+                                <rect key="frame" x="112" y="420" width="170" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="10:10-10:50" placeholderString="10:10-10:50" id="J8e-mo-omQ">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="YE6-rM-CGt"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTg-er-iOV">
+                                <rect key="frame" x="112" y="364" width="170" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="10:50-11:30" placeholderString="10:50-11:30" id="eb1-3d-FM5">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="OGY-uH-i86"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92V-15-aXq">
+                                <rect key="frame" x="112" y="308" width="170" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="11:30-12:40" placeholderString="11:30-12:40" id="sib-HV-qqB">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="uHf-nR-YRs"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wei-d4-E50">
+                                <rect key="frame" x="112" y="252" width="156" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="12:30-1:20" placeholderString="12:30-1:20" id="Cy4-Sy-9GV">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="0eo-10-RyO"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-9o-eWB">
+                                <rect key="frame" x="112" y="198" width="170" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1:20-2:00" placeholderString="1:20-2:00" id="y79-68-VTu">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="J8w-QS-DeN"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lss-HU-dqW">
+                                <rect key="frame" x="112" y="140" width="170" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2:00-2:40" id="UNJ-Pz-cmJ">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="l10-Lx-AsC"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqw-au-eKS">
+                                <rect key="frame" x="112" y="84" width="170" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2:40-3:20" placeholderString="2:40-3:20" id="uyb-hs-PUW">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="WaB-zR-o39"/>
+                                </connections>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-e4-WDH">
+                                <rect key="frame" x="275" y="41" width="528" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="inline" title="Submit" bezelStyle="inline" alignment="center" inset="2" id="H2h-k2-79N">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="26"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="submit:" target="kfX-ga-FrB" id="Oa5-hN-l8v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="s1" destination="ZuR-P7-Zas" id="mlR-UJ-XUu"/>
+                        <outlet property="s2" destination="aTL-un-AeH" id="UYq-yh-YFW"/>
+                        <outlet property="s3" destination="NG6-fo-sAH" id="h6V-FZ-L0q"/>
+                        <outlet property="s4" destination="xCM-6E-0r8" id="ANj-bz-hgn"/>
+                        <outlet property="s5" destination="WWg-xh-tbn" id="AWB-Qo-GqX"/>
+                        <outlet property="s6" destination="gAw-gj-liJ" id="Huh-i6-2Lp"/>
+                        <outlet property="s7" destination="ve3-uZ-Q6m" id="91H-Vq-QRM"/>
+                        <outlet property="s8" destination="PJf-us-miD" id="X2E-hA-Wed"/>
+                    </connections>
+                </viewController>
+                <customObject id="mwp-mB-y5v" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="2371"/>
+        </scene>
         <!--Schedview-->
         <scene sceneID="ItT-io-vnH">
             <objects>
                 <viewController id="QCS-wl-35I" customClass="schedview" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="1wj-xE-Qey">
+                    <view key="view" wantsLayer="YES" id="1wj-xE-Qey">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiB-b8-zu6">
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiB-b8-zu6">
                                 <rect key="frame" x="159" y="671" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="First Period" id="LlQ-zx-ea3">
@@ -391,11 +679,8 @@
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
-                                <connections>
-                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="WCG-Zu-9Ed"/>
-                                </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtC-FN-lXr">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtC-FN-lXr">
                                 <rect key="frame" x="159" y="615" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Second Period" id="OHJ-8H-I4Q">
@@ -407,7 +692,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="bNP-dj-Gdc"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70P-4x-TRn">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70P-4x-TRn">
                                 <rect key="frame" x="159" y="503" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Third Period" id="xLK-Nb-ryi">
@@ -419,7 +704,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="2pd-IF-W4p"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpo-Xg-bvH">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpo-Xg-bvH">
                                 <rect key="frame" x="159" y="447" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fourth Period" id="Tsx-BV-Gwk">
@@ -431,7 +716,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="bAU-Fm-Glw"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQ8-qG-oTM">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQ8-qG-oTM">
                                 <rect key="frame" x="159" y="335" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fifth Period" id="8SA-cO-olo">
@@ -443,7 +728,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="kcT-8N-NGn"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr1-KT-IZq">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr1-KT-IZq">
                                 <rect key="frame" x="159" y="279" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Sixth Period" id="yh6-jJ-71o">
@@ -455,7 +740,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="zzJ-Ie-kdP"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5P6-nQ-yd2">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5P6-nQ-yd2">
                                 <rect key="frame" x="159" y="223" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Seventh Period" id="Gvm-57-9l8">
@@ -467,7 +752,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="oJ4-HE-9f5"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-Fa-XWL">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-Fa-XWL">
                                 <rect key="frame" x="159" y="391" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Mentor Period" id="4fG-5W-Y5i">
@@ -479,7 +764,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="KeN-XC-1gn"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-cO-2Qk">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-cO-2Qk">
                                 <rect key="frame" x="159" y="559" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Community Meeting" id="ncx-ro-2Jb">
@@ -491,7 +776,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="imp-gh-V5Y"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-gl-dKe">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-gl-dKe">
                                 <rect key="frame" x="159" y="167" width="532" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Activity Period" id="uQV-9f-auL">
@@ -503,7 +788,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="31a-5W-YPv"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-ax-ovL">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-ax-ovL">
                                 <rect key="frame" x="-2" y="671" width="143" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="8:30-9:10" placeholderString="8:30-9:10" id="suh-QL-3Rt">
@@ -515,7 +800,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="TaG-fB-wHC"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbb-Td-feL">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbb-Td-feL">
                                 <rect key="frame" x="-2" y="615" width="143" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="9:10-9:50" placeholderString="9:10-9:50" id="Cog-p0-oBa">
@@ -527,7 +812,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="4Vb-Uf-w2T"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8we-Q2-4oS">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8we-Q2-4oS">
                                 <rect key="frame" x="-2" y="559" width="156" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="9:50-10:10" placeholderString="9:50-10:10" id="WQz-5B-pk4">
@@ -539,7 +824,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="n8z-9y-WrS"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-dr-BwP">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-dr-BwP">
                                 <rect key="frame" x="-2" y="503" width="170" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="10:10-10:50" placeholderString="10:10-10:50" id="3F2-SV-c85">
@@ -551,7 +836,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="cfr-cF-GPM"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sz-IW-zrC">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sz-IW-zrC">
                                 <rect key="frame" x="-2" y="447" width="170" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="10:50-11:30" placeholderString="10:50-11:30" id="6qo-D0-2fa">
@@ -563,7 +848,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="ZJP-Oh-8xf"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2I-Xx-WII">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2I-Xx-WII">
                                 <rect key="frame" x="-2" y="391" width="170" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="11:30-12:40" placeholderString="11:30-12:40" id="ao2-Xx-isM">
@@ -575,7 +860,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="SsU-s6-yVo"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qR-Bh-8xo">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qR-Bh-8xo">
                                 <rect key="frame" x="-2" y="335" width="156" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="12:30-1:20" placeholderString="12:30-1:20" id="JJt-lO-xsO">
@@ -587,7 +872,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="2va-cl-uNm"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8n-cv-QxA">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8n-cv-QxA">
                                 <rect key="frame" x="-2" y="281" width="170" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1:20-2:00" placeholderString="1:20-2:00" id="7OP-Zt-g8y">
@@ -599,7 +884,7 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="itD-0R-vmi"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-pM-Dyp">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-pM-Dyp">
                                 <rect key="frame" x="-2" y="223" width="170" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2:00-2:40" id="epX-hd-K8F">
@@ -611,10 +896,10 @@
                                     <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="gqH-aC-jU2"/>
                                 </connections>
                             </textField>
-                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tY-Mc-VuO">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tY-Mc-VuO">
                                 <rect key="frame" x="-2" y="167" width="170" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2:40-3:20" id="v47-4m-2KK">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2:40-3:20" placeholderString="2:40-3:20" id="v47-4m-2KK">
                                     <font key="font" metaFont="system" size="30"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -626,14 +911,24 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="a" destination="dKc-ax-ovL" id="uJC-YR-Az0"/>
+                        <outlet property="b" destination="vbb-Td-feL" id="1Bs-h9-cmO"/>
+                        <outlet property="c" destination="8we-Q2-4oS" id="eTp-fY-8ih"/>
                         <outlet property="community" destination="e2c-cO-2Qk" id="Umq-MD-QQM"/>
+                        <outlet property="d" destination="Lsf-dr-BwP" id="0fH-WP-NKg"/>
+                        <outlet property="e" destination="6sz-IW-zrC" id="Gtq-0w-hOc"/>
                         <outlet property="eight" destination="cIt-gl-dKe" id="cUt-Yp-vo0"/>
+                        <outlet property="f" destination="S2I-Xx-WII" id="KwT-6C-A98"/>
                         <outlet property="five" destination="qQ8-qG-oTM" id="WNQ-OH-HVp"/>
                         <outlet property="four" destination="Hpo-Xg-bvH" id="5An-99-hvr"/>
+                        <outlet property="g" destination="7qR-Bh-8xo" id="6DY-8m-b3q"/>
+                        <outlet property="h" destination="s8n-cv-QxA" id="s9A-MN-jh4"/>
+                        <outlet property="i" destination="3fz-pM-Dyp" id="srO-Xo-m0p"/>
+                        <outlet property="j" destination="6tY-Mc-VuO" id="7I0-id-mYj"/>
                         <outlet property="label" destination="QiB-b8-zu6" id="TgM-KB-tr1"/>
                         <outlet property="mentor" destination="2pn-Fa-XWL" id="xuI-zJ-IHo"/>
                         <outlet property="one" destination="QiB-b8-zu6" id="hmU-N1-hTy"/>
-                        <outlet property="seven" destination="5P6-nQ-yd2" id="Q2W-yB-QyO"/>
+                        <outlet property="seven" destination="5P6-nQ-yd2" id="pO2-Kf-vfd"/>
                         <outlet property="six" destination="pr1-KT-IZq" id="SFg-j3-fYr"/>
                         <outlet property="three" destination="70P-4x-TRn" id="Ckb-zB-Aee"/>
                         <outlet property="two" destination="KtC-FN-lXr" id="zlx-05-a3p"/>
@@ -661,7 +956,7 @@
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="PortalT:" target="G5F-TB-h1L" id="4qj-jQ-hLu"/>
+                                    <action selector="PortalT:" target="G5F-TB-h1L" id="bdS-Pn-AZE"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoV-N8-rno">
@@ -674,7 +969,7 @@
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="Semail:" target="G5F-TB-h1L" id="BlS-OO-IR6"/>
+                                    <action selector="Temail:" target="G5F-TB-h1L" id="Qwl-px-5Wu"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEg-9S-RE2">
@@ -717,13 +1012,25 @@
                                     <segue destination="QCS-wl-35I" kind="show" id="NI5-Mg-Krs"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHR-03-R2r">
+                                <rect key="frame" x="255" y="568" width="136" height="32"/>
+                                <buttonCell key="cell" type="push" title="Edit Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qzm-LY-A70">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="kfX-ga-FrB" kind="show" id="3iM-xi-CpK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="AHR-03-R2r" firstAttribute="centerY" secondItem="Mdh-A1-K7s" secondAttribute="centerY" constant="-201.5" id="06H-i5-hTd"/>
                             <constraint firstItem="c7W-Za-2wt" firstAttribute="leading" secondItem="Mdh-A1-K7s" secondAttribute="leading" constant="268" id="aU9-eZ-xPU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="TeacherPortal" destination="c7W-Za-2wt" id="Raq-oJ-z3R"/>
+                        <outlet property="Temail" destination="RoV-N8-rno" id="I0g-5H-iPs"/>
                     </connections>
                 </viewController>
                 <customObject id="0xH-eE-Lfg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -732,6 +1039,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AHu-TU-7Db"/>
+        <segue reference="NI5-Mg-Krs"/>
+        <segue reference="3iM-xi-CpK"/>
     </inferredMetricsTieBreakers>
 </document>

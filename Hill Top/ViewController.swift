@@ -14,33 +14,6 @@ class myViewController: NSViewController {
     @IBOutlet var Studentbutton: NSButtonCell!
     @IBOutlet var TeacherButton: NSButton!
     @IBOutlet var TeacherPortal: NSButton!
-    @IBAction func PortalS(_ sender: NSButton) {
-        NSWorkspace.shared().open((NSURL(string: "https://webapps.pcrsoft.com/clue/Student-Portal-Login/11552")! as URL))
-    }
-    @IBAction func PortalT(_ sender: Any) {
-        NSWorkspace.shared().open(NSURL(string: "https://webapps.pcrsoft.com/clue/Teacher-Portal-Login/11576")! as URL)
-    }
-    @IBAction private func TCal(_ sender: NSButton) {
-        NSWorkspace.shared().open(NSURL(string: "http://hilltopprep.org/calendar")! as URL)
-    }
-    @IBAction func SCal(_ sender: Any) {
-        NSWorkspace.shared().open(NSURL(string: "http://hilltopprep.org/calendar")! as URL)
-    }
-    @IBAction func Temail(_ sender: Any) {
-        NSWorkspace.shared().open(NSURL(string: "http://mail.google.com/a/hilltopprep.org")! as URL)
-        
-    }
-    @IBAction func Semail(_ sender: Any) {
-        NSWorkspace.shared().open(NSURL(string: "http://mail.google.com/a/hilltopprep.org")! as URL)
-    }
-    @IBAction func TGC(_ sender: Any) {
-        NSWorkspace.shared().open(NSURL(string: "https://classroom.google.com")! as URL)
-    }
-    
-    @IBAction func SGC(_ sender: Any) {
-        NSWorkspace.shared().open(NSURL(string: "https://classroom.google.com")! as URL)
-    }
-
 
     
     override func viewDidLoad() {
@@ -57,17 +30,63 @@ class myViewController: NSViewController {
        }
        
     }
+
 }
 
 class teacherview: NSViewController {
+    @IBAction func PortalT(_ sender: Any) {
+        NSWorkspace.shared().open(NSURL(string: "https://webapps.pcrsoft.com/clue/Teacher-Portal-Login/11576")! as URL)
+    }
+    @IBAction private func TCal(_ sender: NSButton) {
+        NSWorkspace.shared().open(NSURL(string: "http://hilltopprep.org/calendar")! as URL)
+    }
+    
+    @IBAction func Temail(_ sender: Any) {
+        NSWorkspace.shared().open(NSURL(string: "http://mail.google.com/a/hilltopprep.org")! as URL)
+        
+    }
+    
+    @IBAction func TGC(_ sender: Any) {
+        NSWorkspace.shared().open(NSURL(string: "https://classroom.google.com")! as URL)
+    }
+    
 
 }
 
 class studentview: NSViewController {
+    @IBAction func PortalS(_ sender: Any) {
+        NSWorkspace.shared().open((NSURL(string: "https://webapps.pcrsoft.com/clue/Student-Portal-Login/11552")! as URL))
+    }
+    @IBAction func SCal(_ sender: Any) {
+        NSWorkspace.shared().open(NSURL(string: "http://hilltopprep.org/calendar")! as URL)
+    }
+    @IBAction func Semail(_ sender: Any) {
+        NSWorkspace.shared().open(NSURL(string: "http://mail.google.com/a/hilltopprep.org")! as URL)
+    }
+    @IBAction func SGC(_ sender: Any) {
+        NSWorkspace.shared().open(NSURL(string: "https://classroom.google.com")! as URL)
+    }
+
+    override func viewDidLoad() {
+        
+    }
     
 }
 
 class schedview: NSViewController {
+   //static elements
+    @IBOutlet var a: NSTextField!
+    @IBOutlet var b: NSTextField!
+    @IBOutlet var c: NSTextField!
+    @IBOutlet var d: NSTextField!
+    @IBOutlet var e: NSTextField!
+    @IBOutlet var f: NSTextField!
+    @IBOutlet var g: NSTextField!
+    @IBOutlet var h: NSTextField!
+    @IBOutlet var i: NSTextField!
+    @IBOutlet var j: NSTextField!
+    
+    //schedule
     @IBOutlet var one: NSTextField!
     @IBOutlet var two: NSTextField!
     @IBOutlet var three: NSTextField!
@@ -78,6 +97,8 @@ class schedview: NSViewController {
     @IBOutlet var six: NSTextField!
     @IBOutlet var seven: NSTextField!
     @IBOutlet var eight: NSTextField!
+    
+    
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -131,10 +152,64 @@ class schedview: NSViewController {
         else {
             eight.stringValue="Activity Period"
         }
-        
+        let _=setStatic()
 
+    }
+    func setStatic() -> Int{
+        a.stringValue="8:30-9:10"
+        b.stringValue="9:10-9:50"
+        c.stringValue="9:50-10:10"
+        d.stringValue="10:10-10:50"
+        e.stringValue="10:50-11:30"
+        f.stringValue="11:30-12:40"
+        g.stringValue="12:40-1:20"
+        h.stringValue="1:20-2:00"
+        i.stringValue="2:00-2:40"
+        j.stringValue="2:40-3:20"
+        community.stringValue="Community Meeting"
+        mentor.stringValue="Mentor Period"
+        return 1
     }
     
 
-} //        UserDefaults.standard.set(valueToSave, forKey: "preferenceName")
+}
+
+class schedEdit: NSViewController {
+ 
+    @IBOutlet var s1: NSTextField!
+    @IBOutlet var s2: NSTextField!
+    
+    @IBOutlet var s5: NSTextField!
+    @IBOutlet var s4: NSTextField!
+    @IBOutlet var s3: NSTextField!
+    @IBOutlet var s6: NSTextField!
+    @IBOutlet var s7: NSTextField!
+    @IBOutlet var s8: NSTextField!
+    
+    @IBAction func submit(_ sender: Any) {
+        UserDefaults.standard.set(s1.stringValue, forKey: "one")
+        UserDefaults.standard.set(s2.stringValue, forKey: "two")
+        UserDefaults.standard.set(s3.stringValue, forKey: "three")
+        UserDefaults.standard.set(s4.stringValue, forKey: "four")
+        UserDefaults.standard.set(s5.stringValue, forKey: "five")
+        UserDefaults.standard.set(s6.stringValue, forKey: "six")
+        UserDefaults.standard.set(s7.stringValue, forKey: "seven")
+        UserDefaults.standard.set(s8.stringValue, forKey: "eight")
+    }
+    
+    
+    override func viewDidLoad() {
+    
+    //UserDefaults.standard.set(s1.stringValue, forKey: "one")
+        
+        
+    }
+    func s1DidChange(_ : NSNotification) {
+
+    }
+
+    
+    
+}
+//
 
