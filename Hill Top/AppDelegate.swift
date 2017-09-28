@@ -8,9 +8,14 @@
 
 import Cocoa
 
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        
+    }
     func application(_ appliacation: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken: Data) {
        // self.forwardTokenToServer(token: deviceToken)
         

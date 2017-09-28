@@ -12,10 +12,6 @@ class ViewController: NSViewController {
 
     
 
-
-    
-
-
     @IBOutlet var Studentbutton: NSButtonCell!
     @IBOutlet var TeacherButton: NSButton!
     @IBOutlet var TeacherPortal: NSButton!
