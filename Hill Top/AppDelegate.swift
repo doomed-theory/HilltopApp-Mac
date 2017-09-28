@@ -13,7 +13,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
 
-    func application(_ application: NSApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+    @nonobjc func application(_ application: NSApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         
     }
     func application(_ appliacation: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken: Data) {

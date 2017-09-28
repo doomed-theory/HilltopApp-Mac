@@ -8,10 +8,9 @@
 
 import Cocoa
 
-class ViewController: NSWindowController {
+class myViewController: NSViewController {
 
-    
-    @IBOutlet var fplabel: NSTextField!
+   
     @IBOutlet var Studentbutton: NSButtonCell!
     @IBOutlet var TeacherButton: NSButton!
     @IBOutlet var TeacherPortal: NSButton!
@@ -44,21 +43,98 @@ class ViewController: NSWindowController {
 
 
     
-    override func windowDidLoad() {
-        super.windowDidLoad()
-       fplabel.stringValue="testvalue"
-    }
-    //@objc private func buttonClicked() {
-        // your code goes here
-  //  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
- //   override var representedObject: Any? {
-   //     didSet {
+    }
+    @objc private func buttonClicked() {
+        // your code goes here
+    }
+
+    override var representedObject: Any? {
+        didSet {
         // Update the view, if already loaded.
-     //   }
+       }
        
     }
+}
 
+class teacherview: NSViewController {
 
+}
 
+class studentview: NSViewController {
+    
+}
+
+class schedview: NSViewController {
+    @IBOutlet var one: NSTextField!
+    @IBOutlet var two: NSTextField!
+    @IBOutlet var three: NSTextField!
+    @IBOutlet var community: NSTextField!
+    @IBOutlet var four: NSTextField!
+    @IBOutlet var mentor: NSTextField!
+    @IBOutlet var five: NSTextField!
+    @IBOutlet var six: NSTextField!
+    @IBOutlet var seven: NSTextField!
+    @IBOutlet var eight: NSTextField!
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        
+        
+        if let savedValue = UserDefaults.standard.string(forKey: "one") {
+            one.stringValue=savedValue
+        }
+        else {
+            one.stringValue="First Period"
+        }
+        if let savedValue = UserDefaults.standard.string(forKey: "two") {
+            two.stringValue=savedValue
+        }
+        else {
+            two.stringValue="Second Period"
+        }
+        if let savedValue = UserDefaults.standard.string(forKey: "three") {
+            three.stringValue=savedValue
+        }
+        else {
+            three.stringValue="Third Period"
+        }
+        if let savedValue = UserDefaults.standard.string(forKey: "four") {
+            four.stringValue=savedValue
+        }
+        else {
+            four.stringValue="Fourth Period"
+        }
+        if let savedValue = UserDefaults.standard.string(forKey: "five") {
+            five.stringValue=savedValue
+        }
+        else {
+            five.stringValue="Fifth Period"
+        }
+        if let savedValue = UserDefaults.standard.string(forKey: "six") {
+            six.stringValue=savedValue
+        }
+        else {
+            six.stringValue="Sixth Period"
+        }
+        if let savedValue = UserDefaults.standard.string(forKey: "seven") {
+            seven.stringValue=savedValue
+        }
+        else {
+            seven.stringValue="Seventh Period"
+        }
+        if let savedValue = UserDefaults.standard.string(forKey: "eight") {
+            eight.stringValue=savedValue
+        }
+        else {
+            eight.stringValue="Activity Period"
+        }
+        
+
+    }
+    
+
+} //        UserDefaults.standard.set(valueToSave, forKey: "preferenceName")
 
