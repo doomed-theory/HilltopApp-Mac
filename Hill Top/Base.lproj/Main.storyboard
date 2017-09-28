@@ -234,6 +234,7 @@
                                 <buttonCell key="cell" type="push" title="Teachers" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4UU-W8-x4R">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">T</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="Teacher:" target="XfG-lQ-9wD" id="9uw-jq-PBd"/>
@@ -250,6 +251,7 @@
                                 <buttonCell key="cell" type="push" title="Students" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pu0-mK-sq1">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">S</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="Student:" target="XfG-lQ-9wD" id="6Ke-39-wBn"/>
