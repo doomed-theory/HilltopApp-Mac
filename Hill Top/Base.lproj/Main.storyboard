@@ -277,7 +277,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="104" y="283"/>
+            <point key="canvasLocation" x="-1689" y="120"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PJy-Q0-yqG">
@@ -313,15 +313,114 @@
                                     <action selector="SCal:" target="xid-hy-HKm" id="pJF-Jy-DNG"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0U-rS-jBd">
+                                <rect key="frame" x="385" y="632" width="123" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="email" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lLX-CP-01J">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">E</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="Semail:" target="xid-hy-HKm" id="twW-se-uOO"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9c-iV-YJ2">
+                                <rect key="frame" x="508" y="632" width="140" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Google Classroom" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uUF-GM-lbX">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">G</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="SGC:" target="xid-hy-HKm" id="LBc-86-pvR"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-sB-bU0">
+                                <rect key="frame" x="126" y="599" width="136" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YcL-E3-Gh4">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">C</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="SCal:" target="xid-hy-HKm" id="ovX-jK-6dq"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="PortalS" destination="Ley-gj-LDF" id="7Tg-Tp-CgC"/>
+                        <outlet property="Semail" destination="I0U-rS-jBd" id="yn6-2V-uTU"/>
                     </connections>
                 </viewController>
                 <customObject id="rQf-SF-26W" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="461" y="1198"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="qvr-BD-dqf">
+            <objects>
+                <windowController id="AhV-Cb-1cq" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="dgk-NR-b9S">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="249" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+                    </window>
+                    <connections>
+                        <segue destination="JKm-Id-CaK" kind="relationship" relationship="window.shadowedContentViewController" id="Xba-zl-GgK"/>
+                    </connections>
+                </windowController>
+                <customObject id="Ld9-0f-UdW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-65"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mK6-Gp-5FF">
+            <objects>
+                <viewController id="JKm-Id-CaK" sceneMemberID="viewController">
+                    <view key="view" id="8ak-Od-V47">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="oAh-U6-Fre" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925" y="596"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ItT-io-vnH">
+            <objects>
+                <viewController id="QCS-wl-35I" sceneMemberID="viewController">
+                    <view key="view" id="1wj-xE-Qey">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField identifier="FP" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiB-b8-zu6">
+                                <rect key="frame" x="110" y="535" width="581" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="My First Period" id="LlQ-zx-ea3">
+                                    <font key="font" metaFont="system" size="90"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="bJM-YS-Lm1" name="value" keyPath="values.fplabel" id="WCG-Zu-9Ed"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="l3y-yd-aqi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="bJM-YS-Lm1"/>
+            </objects>
+            <point key="canvasLocation" x="1323" y="1198"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m74-8W-PEt">
@@ -343,6 +442,19 @@
                                     <action selector="PortalT:" target="G5F-TB-h1L" id="4qj-jQ-hLu"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoV-N8-rno">
+                                <rect key="frame" x="385" y="601" width="123" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="email" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dRg-mm-FlS">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">E</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="Semail:" target="G5F-TB-h1L" id="BlS-OO-IR6"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEg-9S-RE2">
                                 <rect key="frame" x="126" y="601" width="136" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -354,6 +466,19 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="TCal:" target="G5F-TB-h1L" id="5wG-1b-OOl"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F93-VX-tgU">
+                                <rect key="frame" x="508" y="601" width="140" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Google Classroom" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5rJ-bv-YxV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">G</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="TGC:" target="G5F-TB-h1L" id="o3z-WX-jeC"/>
                                 </connections>
                             </button>
                         </subviews>
