@@ -947,7 +947,7 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7W-Za-2wt">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c7W-Za-2wt">
                                 <rect key="frame" x="262" y="601" width="123" height="32"/>
                                 <buttonCell key="cell" type="push" title="Access Portal" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qb6-ml-Tr5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -998,9 +998,8 @@ DQ
                                     <action selector="TGC:" target="G5F-TB-h1L" id="o3z-WX-jeC"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86R-NC-9Ug">
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86R-NC-9Ug">
                                 <rect key="frame" x="126" y="568" width="136" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FTx-0a-mYC">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1012,8 +1011,11 @@ DQ
                                     <segue destination="QCS-wl-35I" kind="show" id="NI5-Mg-Krs"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHR-03-R2r">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AHR-03-R2r">
                                 <rect key="frame" x="255" y="568" width="136" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="1fT-p2-vqK"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Edit Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qzm-LY-A70">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1025,7 +1027,11 @@ DQ
                         </subviews>
                         <constraints>
                             <constraint firstItem="AHR-03-R2r" firstAttribute="centerY" secondItem="Mdh-A1-K7s" secondAttribute="centerY" constant="-201.5" id="06H-i5-hTd"/>
+                            <constraint firstItem="AHR-03-R2r" firstAttribute="leading" secondItem="86R-NC-9Ug" secondAttribute="trailing" constant="5" id="RLp-Ay-uCX"/>
                             <constraint firstItem="c7W-Za-2wt" firstAttribute="leading" secondItem="Mdh-A1-K7s" secondAttribute="leading" constant="268" id="aU9-eZ-xPU"/>
+                            <constraint firstItem="AHR-03-R2r" firstAttribute="top" secondItem="c7W-Za-2wt" secondAttribute="bottom" constant="12" symbolic="YES" id="dQs-6t-G2w"/>
+                            <constraint firstItem="AHR-03-R2r" firstAttribute="centerX" secondItem="c7W-Za-2wt" secondAttribute="centerX" id="tch-Cd-vTw"/>
+                            <constraint firstItem="AHR-03-R2r" firstAttribute="baseline" secondItem="86R-NC-9Ug" secondAttribute="baseline" id="y1G-0h-CR2"/>
                         </constraints>
                     </view>
                     <connections>
