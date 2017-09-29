@@ -20,15 +20,16 @@ class myViewController: NSViewController {
         super.viewDidLoad()
 
     }
-    @objc private func buttonClicked() {
-        // your code goes here
-    }
 
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
        }
        
+    }
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title="Hill Top App"
     }
 
 }
@@ -48,6 +49,10 @@ class teacherview: NSViewController {
     
     @IBAction func TGC(_ sender: Any) {
         NSWorkspace.shared().open(NSURL(string: "https://classroom.google.com")! as URL)
+    }
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title="Hill Top App: Teachers"
     }
     
 
@@ -69,6 +74,10 @@ class studentview: NSViewController {
 
     override func viewDidLoad() {
         
+    }
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title="Hill Top App: Students"
     }
     
 }
@@ -98,7 +107,10 @@ class schedview: NSViewController {
     @IBOutlet var seven: NSTextField!
     @IBOutlet var eight: NSTextField!
     
-    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title="Hill Top App: Schedule"
+    }
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -178,7 +190,6 @@ class schedEdit: NSViewController {
  
     @IBOutlet var s1: NSTextField!
     @IBOutlet var s2: NSTextField!
-    
     @IBOutlet var s5: NSTextField!
     @IBOutlet var s4: NSTextField!
     @IBOutlet var s3: NSTextField!
@@ -197,6 +208,10 @@ class schedEdit: NSViewController {
         UserDefaults.standard.set(s8.stringValue, forKey: "eight")
     }
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title="Hill Top App: Edit Schedule"
+    }
     
     override func viewDidLoad() {
     
@@ -204,9 +219,7 @@ class schedEdit: NSViewController {
         
         
     }
-    func s1DidChange(_ : NSNotification) {
 
-    }
 
     
     

@@ -8,14 +8,13 @@
 
 import Cocoa
 
-class TeacherViewController: NSViewController {
+class Help: NSViewController {
 
     
+    @IBOutlet var HelpLabel: NSTextField!
     override func viewDidLoad() {
-        super.viewDidLoad()
-        //Teacherbutton.font=NSFont(name: "Times New Roman", size: 26)
-        //StudentButton.font=NSFont(name: "Times New Roman", size: 26)
-        // Do any additional setup after loading the view.
+        HelpLabel.stringValue="command+shift+c: calendar\n"+"command+shift+p: portal \n"+"command+shift+e: email\n"+"command+shift+g: google classroom\n"+"command+shift+s: view schedule"
+       
     }
     
     override var representedObject: Any? {

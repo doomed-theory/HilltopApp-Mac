@@ -7,6 +7,84 @@
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
+        <!--Help-->
+        <scene sceneID="Ix6-Fq-mKa">
+            <objects>
+                <viewController id="zgh-zu-w2w" customClass="Help" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="gtc-Vf-bAM">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8M-4C-Hru">
+                                <rect key="frame" x="-2" y="0.0" width="454" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="ClN-aL-Tvq">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="HelpLabel" destination="N8M-4C-Hru" id="bTH-ke-jvc"/>
+                    </connections>
+                </viewController>
+                <customObject id="XrT-7G-iZi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612" y="-383"/>
+        </scene>
+        <!--Admin-->
+        <scene sceneID="or6-PS-Pg3">
+            <objects>
+                <viewController id="rbN-Pn-Fbv" customClass="admin" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="508-am-ZkH">
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="231"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <secureTextField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-qq-McQ">
+                                <rect key="frame" x="21" y="107" width="230" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Jv0-Ch-0NN">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                            </secureTextField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-Sp-zdM">
+                                <rect key="frame" x="88" y="137" width="98" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter Password" id="TeP-if-PsD">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SY-UG-99L">
+                                <rect key="frame" x="96" y="71" width="84" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Access" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5vk-JG-XfU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="accessClicked:" target="rbN-Pn-Fbv" id="wDl-qA-MZL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="pwdfield" destination="9mw-qq-McQ" id="pfv-WF-4Ft"/>
+                        <outlet property="pwdlabel" destination="KE7-Sp-zdM" id="mzf-mE-YDf"/>
+                    </connections>
+                </viewController>
+                <customObject id="zoN-mH-yJf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-624.5" y="-563.5"/>
+        </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
             <objects>
@@ -70,7 +148,7 @@
                             </menuItem>
                             <menuItem title="Edit" id="5QF-Oa-p0T">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Edit" id="W48-6f-4Dl">
+                                <menu key="submenu" title="Edit" autoenablesItems="NO" id="W48-6f-4Dl">
                                     <items>
                                         <menuItem title="Undo" keyEquivalent="z" id="dRJ-4n-Yzg">
                                             <connections>
@@ -156,7 +234,7 @@
                             </menuItem>
                             <menuItem title="View" id="H8h-7b-M4v">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="View" id="HyV-fh-RgO">
+                                <menu key="submenu" title="View" autoenablesItems="NO" id="HyV-fh-RgO">
                                     <items>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
@@ -169,7 +247,7 @@
                             </menuItem>
                             <menuItem title="Window" id="aUF-d1-5bR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                                <menu key="submenu" title="Window" systemMenu="window" autoenablesItems="NO" id="Td7-aD-5lo">
                                     <items>
                                         <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
                                             <connections>
@@ -198,7 +276,7 @@
                                     <items>
                                         <menuItem title="Hill Top Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
-                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                                <segue destination="zgh-zu-w2w" kind="show" id="mBK-hu-c6h"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -213,7 +291,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Hill_Top" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-954" y="-350"/>
+            <point key="canvasLocation" x="-121" y="-383"/>
         </scene>
         <!--MainView-->
         <scene sceneID="hIz-AP-VOD">
@@ -270,6 +348,19 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-Cp-Mtg">
+                                <rect key="frame" x="0.0" y="747" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="I4K-OP-Nne">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">1</string>
+                                    <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="rbN-Pn-Fbv" kind="show" id="mlo-eD-y5s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Gcc-fR-kw8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="393" id="C7g-ZK-Nrr"/>
@@ -356,7 +447,7 @@
                                 <buttonCell key="cell" type="push" title="Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YcL-E3-Gh4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent">C</string>
+                                    <string key="keyEquivalent">S</string>
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
@@ -959,9 +1050,11 @@ DQ
                                     <action selector="PortalT:" target="G5F-TB-h1L" id="bdS-Pn-AZE"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoV-N8-rno">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RoV-N8-rno">
                                 <rect key="frame" x="385" y="601" width="123" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="Y7e-kJ-gg3"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="email" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dRg-mm-FlS">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -972,9 +1065,11 @@ DQ
                                     <action selector="Temail:" target="G5F-TB-h1L" id="Qwl-px-5Wu"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEg-9S-RE2">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WEg-9S-RE2">
                                 <rect key="frame" x="126" y="601" width="136" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="CSH-sj-H6d"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Hill Top Calendar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="I6T-fQ-gb3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -985,9 +1080,11 @@ DQ
                                     <action selector="TCal:" target="G5F-TB-h1L" id="5wG-1b-OOl"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F93-VX-tgU">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F93-VX-tgU">
                                 <rect key="frame" x="508" y="601" width="140" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="C48-8e-mrH"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Google Classroom" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5rJ-bv-YxV">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -998,12 +1095,12 @@ DQ
                                     <action selector="TGC:" target="G5F-TB-h1L" id="o3z-WX-jeC"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86R-NC-9Ug">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="86R-NC-9Ug">
                                 <rect key="frame" x="126" y="568" width="136" height="32"/>
                                 <buttonCell key="cell" type="push" title="Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FTx-0a-mYC">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent">C</string>
+                                    <string key="keyEquivalent">S</string>
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
@@ -1013,9 +1110,6 @@ DQ
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AHR-03-R2r">
                                 <rect key="frame" x="255" y="568" width="136" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="124" id="1fT-p2-vqK"/>
-                                </constraints>
                                 <buttonCell key="cell" type="push" title="Edit Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qzm-LY-A70">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1026,12 +1120,20 @@ DQ
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="AHR-03-R2r" firstAttribute="centerY" secondItem="Mdh-A1-K7s" secondAttribute="centerY" constant="-201.5" id="06H-i5-hTd"/>
-                            <constraint firstItem="AHR-03-R2r" firstAttribute="leading" secondItem="86R-NC-9Ug" secondAttribute="trailing" constant="5" id="RLp-Ay-uCX"/>
-                            <constraint firstItem="c7W-Za-2wt" firstAttribute="leading" secondItem="Mdh-A1-K7s" secondAttribute="leading" constant="268" id="aU9-eZ-xPU"/>
-                            <constraint firstItem="AHR-03-R2r" firstAttribute="top" secondItem="c7W-Za-2wt" secondAttribute="bottom" constant="12" symbolic="YES" id="dQs-6t-G2w"/>
-                            <constraint firstItem="AHR-03-R2r" firstAttribute="centerX" secondItem="c7W-Za-2wt" secondAttribute="centerX" id="tch-Cd-vTw"/>
-                            <constraint firstItem="AHR-03-R2r" firstAttribute="baseline" secondItem="86R-NC-9Ug" secondAttribute="baseline" id="y1G-0h-CR2"/>
+                            <constraint firstItem="WEg-9S-RE2" firstAttribute="leading" secondItem="86R-NC-9Ug" secondAttribute="leading" id="12o-bh-dzo"/>
+                            <constraint firstItem="F93-VX-tgU" firstAttribute="leading" secondItem="RoV-N8-rno" secondAttribute="trailing" constant="12" symbolic="YES" id="58Z-m5-b0y"/>
+                            <constraint firstItem="RoV-N8-rno" firstAttribute="leading" secondItem="c7W-Za-2wt" secondAttribute="trailing" constant="12" symbolic="YES" id="6OK-Ze-7xz"/>
+                            <constraint firstItem="86R-NC-9Ug" firstAttribute="top" secondItem="WEg-9S-RE2" secondAttribute="bottom" constant="12" symbolic="YES" id="7kO-zH-U9F"/>
+                            <constraint firstItem="c7W-Za-2wt" firstAttribute="baseline" secondItem="RoV-N8-rno" secondAttribute="baseline" id="9F2-JM-p1M"/>
+                            <constraint firstItem="c7W-Za-2wt" firstAttribute="leading" secondItem="WEg-9S-RE2" secondAttribute="trailing" constant="12" symbolic="YES" id="BuV-Dq-Kdr"/>
+                            <constraint firstItem="86R-NC-9Ug" firstAttribute="baseline" secondItem="AHR-03-R2r" secondAttribute="baseline" id="KzX-qs-dU1"/>
+                            <constraint firstItem="RoV-N8-rno" firstAttribute="baseline" secondItem="F93-VX-tgU" secondAttribute="baseline" id="N5d-P9-9zN"/>
+                            <constraint firstItem="WEg-9S-RE2" firstAttribute="trailing" secondItem="86R-NC-9Ug" secondAttribute="trailing" id="OuP-6K-YdB"/>
+                            <constraint firstItem="AHR-03-R2r" firstAttribute="leading" secondItem="86R-NC-9Ug" secondAttribute="trailing" constant="5" id="YGt-VW-btJ"/>
+                            <constraint firstItem="WEg-9S-RE2" firstAttribute="top" secondItem="Mdh-A1-K7s" secondAttribute="top" constant="139" id="ab2-kn-6z2"/>
+                            <constraint firstItem="WEg-9S-RE2" firstAttribute="baseline" secondItem="c7W-Za-2wt" secondAttribute="baseline" id="eH4-u7-W2e"/>
+                            <constraint firstItem="WEg-9S-RE2" firstAttribute="leading" secondItem="Mdh-A1-K7s" secondAttribute="leading" constant="132" id="sQE-4d-mBQ"/>
+                            <constraint firstItem="c7W-Za-2wt" firstAttribute="centerX" secondItem="AHR-03-R2r" secondAttribute="centerX" id="zOw-F9-4kP"/>
                         </constraints>
                     </view>
                     <connections>

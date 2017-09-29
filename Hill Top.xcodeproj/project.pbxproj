@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214070B41F7E68CF00D52EA7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214070B31F7E68CF00D52EA7 /* AppKit.framework */; };
+		214070B61F7E6DCA00D52EA7 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214070B51F7E6DCA00D52EA7 /* Admin.swift */; };
 		21C513CA1F791F6F002163F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513C91F791F6F002163F5 /* AppDelegate.swift */; };
 		21C513CC1F791F6F002163F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513CB1F791F6F002163F5 /* ViewController.swift */; };
 		21C513CF1F791F6F002163F5 /* Hill_Top.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21C513CD1F791F6F002163F5 /* Hill_Top.xcdatamodeld */; };
@@ -14,8 +16,8 @@
 		21C513D41F791F6F002163F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C513D21F791F6F002163F5 /* Main.storyboard */; };
 		21C513DF1F791F6F002163F5 /* Hill_TopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513DE1F791F6F002163F5 /* Hill_TopTests.swift */; };
 		21C513EA1F791F6F002163F5 /* Hill_TopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513E91F791F6F002163F5 /* Hill_TopUITests.swift */; };
-		21C513F91F79201F002163F5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C513F81F79201F002163F5 /* Cocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		21C513FD1F7926FF002163F5 /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513FC1F7926FF002163F5 /* TeacherViewController.swift */; };
+		21C513F91F79201F002163F5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C513F81F79201F002163F5 /* Cocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		21C513FD1F7926FF002163F5 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513FC1F7926FF002163F5 /* Help.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		214070B31F7E68CF00D52EA7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		214070B51F7E6DCA00D52EA7 /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		21C513C61F791F6E002163F5 /* Hill Top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hill Top.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C513C91F791F6F002163F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C513CB1F791F6F002163F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +54,7 @@
 		21C513E91F791F6F002163F5 /* Hill_TopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hill_TopUITests.swift; sourceTree = "<group>"; };
 		21C513EB1F791F6F002163F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21C513F81F79201F002163F5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		21C513FC1F7926FF002163F5 /* TeacherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
+		21C513FC1F7926FF002163F5 /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214070B41F7E68CF00D52EA7 /* AppKit.framework in Frameworks */,
 				21C513F91F79201F002163F5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +112,8 @@
 				21C513CB1F791F6F002163F5 /* ViewController.swift */,
 				21C513D01F791F6F002163F5 /* Assets.xcassets */,
 				21C513D21F791F6F002163F5 /* Main.storyboard */,
-				21C513FC1F7926FF002163F5 /* TeacherViewController.swift */,
+				21C513FC1F7926FF002163F5 /* Help.swift */,
+				214070B51F7E6DCA00D52EA7 /* Admin.swift */,
 				21C513D51F791F6F002163F5 /* Info.plist */,
 				21C513CD1F791F6F002163F5 /* Hill_Top.xcdatamodeld */,
 			);
@@ -135,6 +141,7 @@
 		21C513F71F79201F002163F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				214070B31F7E68CF00D52EA7 /* AppKit.framework */,
 				21C513F81F79201F002163F5 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -274,8 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C513CC1F791F6F002163F5 /* ViewController.swift in Sources */,
-				21C513FD1F7926FF002163F5 /* TeacherViewController.swift in Sources */,
+				21C513FD1F7926FF002163F5 /* Help.swift in Sources */,
 				21C513CA1F791F6F002163F5 /* AppDelegate.swift in Sources */,
+				214070B61F7E6DCA00D52EA7 /* Admin.swift in Sources */,
 				21C513CF1F791F6F002163F5 /* Hill_Top.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,7 +358,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -400,7 +408,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
