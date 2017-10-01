@@ -21,7 +21,6 @@ class myViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hiddenbutton.stringValue="a"
-        including.setBackground(self.view)
 
     }
 
@@ -38,7 +37,10 @@ class myViewController: NSViewController {
     }
     override func viewWillAppear() {
         super.viewWillAppear()
-        including.displayHeader(wv) }
+        including.displayHeader(wv)
+        including.setBackground(self.view)
+
+    }
 
 }
 
