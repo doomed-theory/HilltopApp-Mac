@@ -21,6 +21,10 @@ class myViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hiddenbutton.stringValue="a"
+        self.view.wantsLayer = true
+        
+        let image = NSImage(named: "hilltop2.jpg")
+        self.view.layer!.contents = image
 
     }
 

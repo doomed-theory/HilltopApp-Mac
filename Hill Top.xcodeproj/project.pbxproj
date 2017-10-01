@@ -11,6 +11,7 @@
 		214070B61F7E6DCA00D52EA7 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214070B51F7E6DCA00D52EA7 /* Admin.swift */; };
 		214070B81F815A7D00D52EA7 /* Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214070B71F815A7C00D52EA7 /* Include.swift */; };
 		214070BA1F81605300D52EA7 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 214070B91F81605300D52EA7 /* web */; };
+		214070BC1F81647E00D52EA7 /* hilltop2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 214070BB1F81647E00D52EA7 /* hilltop2.jpg */; };
 		21C513CA1F791F6F002163F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513C91F791F6F002163F5 /* AppDelegate.swift */; };
 		21C513CC1F791F6F002163F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513CB1F791F6F002163F5 /* ViewController.swift */; };
 		21C513CF1F791F6F002163F5 /* Hill_Top.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21C513CD1F791F6F002163F5 /* Hill_Top.xcdatamodeld */; };
@@ -44,6 +45,7 @@
 		214070B51F7E6DCA00D52EA7 /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		214070B71F815A7C00D52EA7 /* Include.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Include.swift; path = "Hill Top/Include.swift"; sourceTree = "<group>"; };
 		214070B91F81605300D52EA7 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
+		214070BB1F81647E00D52EA7 /* hilltop2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hilltop2.jpg; sourceTree = "<group>"; };
 		21C513C61F791F6E002163F5 /* Hill Top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hill Top.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C513C91F791F6F002163F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C513CB1F791F6F002163F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				21C513FC1F7926FF002163F5 /* Help.swift */,
 				214070B51F7E6DCA00D52EA7 /* Admin.swift */,
 				21C513D51F791F6F002163F5 /* Info.plist */,
+				214070BB1F81647E00D52EA7 /* hilltop2.jpg */,
 				21C513CD1F791F6F002163F5 /* Hill_Top.xcdatamodeld */,
 			);
 			path = "Hill Top";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				214070BA1F81605300D52EA7 /* web in Resources */,
+				214070BC1F81647E00D52EA7 /* hilltop2.jpg in Resources */,
 				21C513D11F791F6F002163F5 /* Assets.xcassets in Resources */,
 				21C513D41F791F6F002163F5 /* Main.storyboard in Resources */,
 			);
