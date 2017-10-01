@@ -40,11 +40,11 @@
             <objects>
                 <viewController id="UW6-JR-ZGS" customClass="admmain" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" identifier="adminsecret" id="3uv-gG-RJU">
-                        <rect key="frame" x="0.0" y="0.0" width="611" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="611" height="563"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-T2-6Fk">
-                                <rect key="frame" x="225" y="414" width="141" height="17"/>
+                                <rect key="frame" x="225" y="420" width="141" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter Alert Text" placeholderString="Enter Alert Text" id="BI6-of-2GW">
                                     <font key="font" metaFont="system"/>
@@ -79,8 +79,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Boo-JY-Spe">
+                                <rect key="frame" x="0.0" y="461" width="611" height="102"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGs-WC-dhH">
-                                <rect key="frame" x="225" y="84" width="142" height="26"/>
+                                <rect key="frame" x="225" y="74" width="142" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="School Event" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="oyM-Ls-Lng" id="ywW-Nj-MFj">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -105,11 +113,12 @@
                         <outlet property="submitbutton" destination="QGs-WC-dhH" id="u9A-xy-1jE"/>
                         <outlet property="textarea" destination="0Qr-BB-NLS" id="mxA-c9-yH4"/>
                         <outlet property="texting" destination="Npf-qf-48E" id="1MS-oa-2wt"/>
+                        <outlet property="wv" destination="Boo-JY-Spe" id="GhK-gA-y3g"/>
                     </connections>
                 </viewController>
                 <customObject id="T4s-tC-cdy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-677.5" y="-875.5"/>
+            <point key="canvasLocation" x="-677.5" y="-907.5"/>
         </scene>
         <!--Admin-->
         <scene sceneID="or6-PS-Pg3">
@@ -390,7 +399,7 @@
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Teachers" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4UU-W8-x4R">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="system" size="20"/>
                                     <string key="keyEquivalent">T</string>
                                 </buttonCell>
                                 <connections>
@@ -410,7 +419,7 @@
                                         </constraints>
                                         <buttonCell key="cell" type="push" title="Students" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pu0-mK-sq1">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="system" size="20"/>
                                             <string key="keyEquivalent">S</string>
                                         </buttonCell>
                                         <connections>
@@ -478,7 +487,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ley-gj-LDF">
-                                <rect key="frame" x="262" y="632" width="123" height="32"/>
+                                <rect key="frame" x="275" y="511" width="123" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Access Portal" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ejF-Mp-85e">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -491,7 +500,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-5K-dAk">
-                                <rect key="frame" x="126" y="632" width="136" height="32"/>
+                                <rect key="frame" x="139" y="511" width="136" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Hill Top Calendar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7yN-12-7L2">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -504,7 +513,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0U-rS-jBd">
-                                <rect key="frame" x="385" y="632" width="123" height="32"/>
+                                <rect key="frame" x="398" y="511" width="123" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="email" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lLX-CP-01J">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -517,7 +526,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9c-iV-YJ2">
-                                <rect key="frame" x="508" y="632" width="140" height="32"/>
+                                <rect key="frame" x="521" y="511" width="140" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Google Classroom" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uUF-GM-lbX">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -530,7 +539,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-sB-bU0">
-                                <rect key="frame" x="126" y="599" width="136" height="32"/>
+                                <rect key="frame" x="139" y="478" width="136" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YcL-E3-Gh4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -544,7 +553,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ao-jP-uRs">
-                                <rect key="frame" x="262" y="599" width="123" height="32"/>
+                                <rect key="frame" x="275" y="478" width="123" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Edit Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Gi-UW-I9P">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -555,16 +564,36 @@
                                     <segue destination="kfX-ga-FrB" kind="show" id="JtG-eb-5pc"/>
                                 </connections>
                             </button>
+                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfb-FX-m2F">
+                                <rect key="frame" x="0.0" y="666" width="800" height="102"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ww-PA-YXY">
+                                <rect key="frame" x="398" y="478" width="124" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Power Library" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ljr-Ct-z75">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="power:" target="xid-hy-HKm" id="1o4-hR-SwS"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="PortalS" destination="Ley-gj-LDF" id="7Tg-Tp-CgC"/>
                         <outlet property="Semail" destination="I0U-rS-jBd" id="yn6-2V-uTU"/>
+                        <outlet property="wv" destination="Sfb-FX-m2F" id="S57-h0-62j"/>
                     </connections>
                 </viewController>
                 <customObject id="rQf-SF-26W" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="461" y="1198"/>
+            <point key="canvasLocation" x="275" y="1221"/>
         </scene>
         <!--Sched Edit-->
         <scene sceneID="lPC-Ym-Jec">
@@ -1126,8 +1155,16 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfX-mJ-oek">
+                                <rect key="frame" x="0.0" y="666" width="800" height="102"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c7W-Za-2wt">
-                                <rect key="frame" x="262" y="601" width="123" height="32"/>
+                                <rect key="frame" x="275" y="501" width="123" height="32"/>
                                 <buttonCell key="cell" type="push" title="Access Portal" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qb6-ml-Tr5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1139,7 +1176,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RoV-N8-rno">
-                                <rect key="frame" x="385" y="601" width="123" height="32"/>
+                                <rect key="frame" x="398" y="501" width="123" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="Y7e-kJ-gg3"/>
                                 </constraints>
@@ -1154,7 +1191,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WEg-9S-RE2">
-                                <rect key="frame" x="126" y="601" width="136" height="32"/>
+                                <rect key="frame" x="139" y="501" width="136" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="CSH-sj-H6d"/>
                                 </constraints>
@@ -1169,7 +1206,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F93-VX-tgU">
-                                <rect key="frame" x="508" y="601" width="140" height="32"/>
+                                <rect key="frame" x="521" y="501" width="140" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="C48-8e-mrH"/>
                                 </constraints>
@@ -1184,7 +1221,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="86R-NC-9Ug">
-                                <rect key="frame" x="126" y="568" width="136" height="32"/>
+                                <rect key="frame" x="139" y="468" width="136" height="32"/>
                                 <buttonCell key="cell" type="push" title="Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FTx-0a-mYC">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1197,7 +1234,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AHR-03-R2r">
-                                <rect key="frame" x="255" y="568" width="136" height="32"/>
+                                <rect key="frame" x="268" y="468" width="136" height="32"/>
                                 <buttonCell key="cell" type="push" title="Edit Schedule" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qzm-LY-A70">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1218,15 +1255,16 @@ DQ
                             <constraint firstItem="RoV-N8-rno" firstAttribute="baseline" secondItem="F93-VX-tgU" secondAttribute="baseline" id="N5d-P9-9zN"/>
                             <constraint firstItem="WEg-9S-RE2" firstAttribute="trailing" secondItem="86R-NC-9Ug" secondAttribute="trailing" id="OuP-6K-YdB"/>
                             <constraint firstItem="AHR-03-R2r" firstAttribute="leading" secondItem="86R-NC-9Ug" secondAttribute="trailing" constant="5" id="YGt-VW-btJ"/>
-                            <constraint firstItem="WEg-9S-RE2" firstAttribute="top" secondItem="Mdh-A1-K7s" secondAttribute="top" constant="139" id="ab2-kn-6z2"/>
+                            <constraint firstItem="WEg-9S-RE2" firstAttribute="top" secondItem="Mdh-A1-K7s" secondAttribute="top" constant="239" id="ab2-kn-6z2"/>
                             <constraint firstItem="WEg-9S-RE2" firstAttribute="baseline" secondItem="c7W-Za-2wt" secondAttribute="baseline" id="eH4-u7-W2e"/>
-                            <constraint firstItem="WEg-9S-RE2" firstAttribute="leading" secondItem="Mdh-A1-K7s" secondAttribute="leading" constant="132" id="sQE-4d-mBQ"/>
+                            <constraint firstItem="WEg-9S-RE2" firstAttribute="leading" secondItem="Mdh-A1-K7s" secondAttribute="leading" constant="145" id="sQE-4d-mBQ"/>
                             <constraint firstItem="c7W-Za-2wt" firstAttribute="centerX" secondItem="AHR-03-R2r" secondAttribute="centerX" id="zOw-F9-4kP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="TeacherPortal" destination="c7W-Za-2wt" id="Raq-oJ-z3R"/>
                         <outlet property="Temail" destination="RoV-N8-rno" id="I0g-5H-iPs"/>
+                        <outlet property="wv" destination="zfX-mJ-oek" id="pb0-X7-Psi"/>
                     </connections>
                 </viewController>
                 <customObject id="0xH-eE-Lfg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1235,7 +1273,7 @@ DQ
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NI5-Mg-Krs"/>
-        <segue reference="3iM-xi-CpK"/>
+        <segue reference="JtG-eb-5pc"/>
+        <segue reference="AHu-TU-7Db"/>
     </inferredMetricsTieBreakers>
 </document>

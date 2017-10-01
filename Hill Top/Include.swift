@@ -32,6 +32,12 @@ class including {
         }
         
     }
+    static func setBackground(_ view:NSView) {
+        view.wantsLayer = true
+        
+        let image = NSImage(named: "hilltop2.jpg")
+        view.layer!.contents = image
+    }
     }
 /*<div id="welcome">
 <img id="logo" width="64" height="64" src="../res/logo.png">

@@ -7,7 +7,7 @@
 //
 
 import AppKit
-
+import WebKit
 class admin: NSViewController {
     @IBOutlet var pwdlabel: NSTextField!
     @IBOutlet var pwdfield: NSSecureTextField!
@@ -49,7 +49,11 @@ class admin: NSViewController {
 
 }
     class admmain: NSViewController {
+        @IBOutlet var wv: WKWebView!
         @IBOutlet var submitbutton: NSPopUpButton!
+        override func viewWillAppear() {
+        including.displayHeader(wv)
+        }
         @IBAction func submitalert(_ sender: Any) {
             let enteredAlert=submitbutton.titleOfSelectedItem
             let enteredText :String?=(textarea.string ?? "")

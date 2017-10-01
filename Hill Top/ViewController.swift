@@ -21,10 +21,7 @@ class myViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hiddenbutton.stringValue="a"
-        self.view.wantsLayer = true
-        
-        let image = NSImage(named: "hilltop2.jpg")
-        self.view.layer!.contents = image
+        including.setBackground(self.view)
 
     }
 
@@ -46,6 +43,7 @@ class myViewController: NSViewController {
 }
 
 class teacherview: NSViewController {
+    @IBOutlet var wv: WKWebView!
     @IBAction func PortalT(_ sender: Any) {
         NSWorkspace.shared().open(NSURL(string: "https://webapps.pcrsoft.com/clue/Teacher-Portal-Login/11576")! as URL)
     }
@@ -64,12 +62,20 @@ class teacherview: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window?.title="Hill Top App: Teachers"
+        including.setBackground(self.view)
+    }
+    override func viewWillAppear() {
+    including.displayHeader(wv)
     }
     
 
 }
 
 class studentview: NSViewController {
+    @IBOutlet var wv: WKWebView!
+    @IBAction func power(_ sender: Any) {
+        NSWorkspace.shared().open((NSURL(string: "http://www.powerlibrary.net/Interface/POWER.asp?ID=PL5455&START=List")! as URL))
+    }
     @IBAction func PortalS(_ sender: Any) {
         NSWorkspace.shared().open((NSURL(string: "https://webapps.pcrsoft.com/clue/Student-Portal-Login/11552")! as URL))
     }
@@ -89,6 +95,10 @@ class studentview: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window?.title="Hill Top App: Students"
+        including.setBackground(self.view)
+    }
+    override func viewWillAppear() {
+    including.displayHeader(wv)
     }
     
 }
