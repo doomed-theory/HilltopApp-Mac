@@ -12,9 +12,12 @@ class admin: NSViewController {
     @IBOutlet var pwdlabel: NSTextField!
     @IBOutlet var pwdfield: NSSecureTextField!
     @IBAction func accessClicked(_ sender: Any) {
-        let passwordEntered :string
-        let passwordCorrect :string="Fab*1964"
+        let passwordEntered :String
+        let passwordCorrect :String="Fab*1964"
         passwordEntered=pwdfield.stringValue
+        if passwordEntered == passwordCorrect {
+            performSegue(withIdentifier: "adminsecret", sender: (Any).self)
+        }
         
     }
     override func viewDidLoad() {
@@ -24,5 +27,46 @@ class admin: NSViewController {
         super.viewDidAppear()
         self.view.window?.title="Hill Top App: Administrative Panel Locked"
     }
-    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        var pwd: String {
+            get{
+                return self.pwdfield.stringValue
+            }
+            
+        }
+        
+        if pwd == "Fab*1964" {
+            return true
+        }
+        else {
+            return false
+        }
+
+    }
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+            self.dismiss(nil)
+    }
+
+}
+    class admmain: NSViewController {
+        @IBOutlet var submitbutton: NSPopUpButton!
+        @IBAction func submitalert(_ sender: Any) {
+            let enteredAlert=submitbutton.titleOfSelectedItem
+            let enteredText :String?=(textarea.string ?? "")
+            print(enteredAlert ?? NSError())
+            print(enteredText ?? "no text entered")
+            SendEmail.send(enteredAlert!,enteredText!)
+        }
+    @IBOutlet var textarea: NSTextView!
+    @IBOutlet var alerting: NSTextField!
+        override func viewDidLoad() {
+            alerting.stringValue="Enter Alert Text"
+            
+        }
+
+}
+class SendEmail: NSObject {
+    static func send(_ subject:String, _ msg: String) {
+   
+    }
 }

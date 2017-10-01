@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="12121"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -33,6 +34,82 @@
                 <customObject id="XrT-7G-iZi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="612" y="-383"/>
+        </scene>
+        <!--Admmain-->
+        <scene sceneID="MyE-VL-tLl">
+            <objects>
+                <viewController id="UW6-JR-ZGS" customClass="admmain" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" identifier="adminsecret" id="3uv-gG-RJU">
+                        <rect key="frame" x="0.0" y="0.0" width="611" height="499"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-T2-6Fk">
+                                <rect key="frame" x="225" y="414" width="141" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter Alert Text" placeholderString="Enter Alert Text" id="BI6-of-2GW">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npf-qf-48E">
+                                <rect key="frame" x="20" y="118" width="565" height="280"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <clipView key="contentView" ambiguous="YES" id="QFt-zv-Rh8">
+                                    <rect key="frame" x="1" y="1" width="563" height="278"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="0Qr-BB-NLS">
+                                            <rect key="frame" x="0.0" y="0.0" width="563" height="278"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="563" height="278"/>
+                                            <size key="maxSize" width="563" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="tb5-DH-0bZ">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ZDo-cf-B7j">
+                                    <rect key="frame" x="548" y="1" width="16" height="278"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGs-WC-dhH">
+                                <rect key="frame" x="225" y="84" width="142" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="School Event" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="oyM-Ls-Lng" id="ywW-Nj-MFj">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="UQC-JU-Nmh">
+                                        <items>
+                                            <menuItem title="School Event" state="on" id="oyM-Ls-Lng"/>
+                                            <menuItem title="school closure or delay" id="2zK-y1-med"/>
+                                            <menuItem title="Hill Top Wide Announcement" id="t6p-WS-xKM"/>
+                                            <menuItem title="priority" id="3Cp-Bx-1v5"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="submitalert:" target="UW6-JR-ZGS" id="tge-pb-fML"/>
+                                </connections>
+                            </popUpButton>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="alerting" destination="kcP-T2-6Fk" id="89a-of-ZM9"/>
+                        <outlet property="submitbutton" destination="QGs-WC-dhH" id="u9A-xy-1jE"/>
+                        <outlet property="textarea" destination="0Qr-BB-NLS" id="mxA-c9-yH4"/>
+                        <outlet property="texting" destination="Npf-qf-48E" id="1MS-oa-2wt"/>
+                    </connections>
+                </viewController>
+                <customObject id="T4s-tC-cdy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-677.5" y="-875.5"/>
         </scene>
         <!--Admin-->
         <scene sceneID="or6-PS-Pg3">
@@ -72,6 +149,7 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="accessClicked:" target="rbN-Pn-Fbv" id="wDl-qA-MZL"/>
+                                    <segue destination="UW6-JR-ZGS" kind="show" id="6GA-ey-tGL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -349,9 +427,9 @@
                                 </customSpacing>
                             </stackView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-Cp-Mtg">
-                                <rect key="frame" x="0.0" y="747" width="69" height="21"/>
+                                <rect key="frame" x="13" y="756" width="8" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="I4K-OP-Nne">
+                                <buttonCell key="cell" type="bevel" title=" " bezelStyle="rounded" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="I4K-OP-Nne">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent">1</string>
@@ -361,6 +439,14 @@
                                     <segue destination="rbN-Pn-Fbv" kind="show" id="mlo-eD-y5s"/>
                                 </connections>
                             </button>
+                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hd6-7D-mGM">
+                                <rect key="frame" x="0.0" y="666" width="800" height="102"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Gcc-fR-kw8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="393" id="C7g-ZK-Nrr"/>
@@ -375,6 +461,8 @@
                         <outlet property="TeachButton" destination="F3b-YP-GiQ" id="hbf-L6-xhY"/>
                         <outlet property="TeacherButton" destination="F3b-YP-GiQ" id="9tm-xW-ZMo"/>
                         <outlet property="Teacherbutton" destination="Qdt-8k-YNe" id="Iqm-S1-5F6"/>
+                        <outlet property="hiddenbutton" destination="5Rn-Cp-Mtg" id="hDS-Xy-dTD"/>
+                        <outlet property="wv" destination="Hd6-7D-mGM" id="wSb-n5-am2"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

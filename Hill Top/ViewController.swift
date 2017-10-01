@@ -7,17 +7,20 @@
 //
 
 import Cocoa
-
+import WebKit
 class myViewController: NSViewController {
 
    
     @IBOutlet var Studentbutton: NSButtonCell!
     @IBOutlet var TeacherButton: NSButton!
     @IBOutlet var TeacherPortal: NSButton!
+    @IBOutlet var hiddenbutton: NSButton!
+    @IBOutlet var wv: WKWebView!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hiddenbutton.stringValue="a"
 
     }
 
@@ -30,7 +33,11 @@ class myViewController: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window?.title="Hill Top App"
+        hiddenbutton.stringValue="a"
     }
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        including.displayHeader(wv) }
 
 }
 
