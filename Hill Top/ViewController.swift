@@ -62,10 +62,11 @@ class teacherview: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window?.title="Hill Top App: Teachers"
-        including.setBackground(self.view)
+
     }
     override func viewWillAppear() {
     including.displayHeader(wv)
+    including.setBackground(self.view)
     }
     
 
@@ -219,6 +220,7 @@ class schedEdit: NSViewController {
     @IBOutlet var s8: NSTextField!
     
     @IBAction func submit(_ sender: Any) {
+        NSLog("no error")
         UserDefaults.standard.set(s1.stringValue, forKey: "one")
         UserDefaults.standard.set(s2.stringValue, forKey: "two")
         UserDefaults.standard.set(s3.stringValue, forKey: "three")

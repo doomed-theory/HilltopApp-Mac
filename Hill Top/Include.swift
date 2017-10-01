@@ -36,7 +36,7 @@ class including {
         view.wantsLayer = true
         
         let image = NSImage(named: "hilltop2.jpg")
-        view.layer!.contents = image
+        view.layer?.contents = image
     }
     }
 /*<div id="welcome">

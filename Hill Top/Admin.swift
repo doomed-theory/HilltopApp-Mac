@@ -71,6 +71,12 @@ class admin: NSViewController {
 }
 class SendEmail: NSObject {
     static func send(_ subject:String, _ msg: String) {
+        var maillink :String=""
+        maillink+="mailto:students@hilltopprep.org,faculity@hilltopprep.org?subject="
+        maillink+=subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        maillink+="&body="
+        maillink+=msg.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        NSWorkspace.shared().open(URL(string: maillink)! as URL)
    
     }
 }
