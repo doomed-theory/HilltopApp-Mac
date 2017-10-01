@@ -9,8 +9,16 @@
 import Cocoa
 import WebKit
 class myViewController: NSViewController {
+    var timer: Timer!
+    
+    let formatter: DateFormatter = {
+        let tmpFormatter = DateFormatter()
+        tmpFormatter.dateFormat = "hh:mm:ss"
+        return tmpFormatter
+    }()
 
    
+    @IBOutlet var currtime: NSTextField!
     @IBOutlet var Studentbutton: NSButtonCell!
     @IBOutlet var TeacherButton: NSButton!
     @IBOutlet var TeacherPortal: NSButton!
@@ -39,8 +47,17 @@ class myViewController: NSViewController {
         super.viewWillAppear()
         including.displayHeader(wv)
         including.setBackground(self.view)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getTimeOfDate), userInfo: nil, repeats: true)
+        
 
     }
+    func getTimeOfDate() {
+        let curDate = Date()
+        
+        currtime.stringValue = formatter.string(from: curDate)
+        
+    }
+    
 
 }
 

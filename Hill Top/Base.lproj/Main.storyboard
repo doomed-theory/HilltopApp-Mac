@@ -393,8 +393,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-YP-GiQ">
-                                <rect key="frame" x="201" y="390" width="174" height="101"/>
+                            <button wantsLayer="YES" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-YP-GiQ">
+                                <rect key="frame" x="201" y="332" width="174" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="7gy-NQ-HbE"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Z9L-iV-uEi"/>
@@ -412,8 +412,8 @@
                                     <segue destination="G5F-TB-h1L" kind="show" id="B2n-fx-bW5"/>
                                 </connections>
                             </button>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-fR-kw8">
-                                <rect key="frame" x="393" y="397" width="200" height="90"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-fR-kw8">
+                                <rect key="frame" x="393" y="339" width="200" height="90"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qdt-8k-YNe">
                                         <rect key="frame" x="-6" y="-7" width="212" height="101"/>
@@ -461,6 +461,15 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBo-Fu-ZAt">
+                                <rect key="frame" x="263" y="463" width="507" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="g2W-6T-jvI">
+                                    <font key="font" metaFont="system" size="120"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Gcc-fR-kw8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="393" id="C7g-ZK-Nrr"/>
@@ -475,6 +484,7 @@
                         <outlet property="TeachButton" destination="F3b-YP-GiQ" id="hbf-L6-xhY"/>
                         <outlet property="TeacherButton" destination="F3b-YP-GiQ" id="9tm-xW-ZMo"/>
                         <outlet property="Teacherbutton" destination="Qdt-8k-YNe" id="Iqm-S1-5F6"/>
+                        <outlet property="currtime" destination="MBo-Fu-ZAt" id="Lqc-0u-56Q"/>
                         <outlet property="hiddenbutton" destination="5Rn-Cp-Mtg" id="hDS-Xy-dTD"/>
                         <outlet property="wv" destination="Hd6-7D-mGM" id="wSb-n5-am2"/>
                     </connections>
