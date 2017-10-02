@@ -45,6 +45,8 @@ class admin: NSViewController {
     }
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
             self.dismiss(nil)
+            self.view.window?.close()
+        
     }
 
 }

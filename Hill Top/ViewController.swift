@@ -51,6 +51,11 @@ class myViewController: NSViewController {
         
 
     }
+    override func viewDidDisappear() {
+    }
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        self.view.window?.close()
+    }
     func getTimeOfDate() {
         let curDate = Date()
         
@@ -99,7 +104,7 @@ class studentview: NSViewController {
     @IBAction func PortalS(_ sender: Any) {
         NSWorkspace.shared().open((NSURL(string: "https://webapps.pcrsoft.com/clue/Student-Portal-Login/11552")! as URL))
     }
-    @IBAction func SCal(_ sender: Any) {
+    @IBAction func Scal(_ sender: Any) {
         NSWorkspace.shared().open(NSURL(string: "http://hilltopprep.org/calendar")! as URL)
     }
     @IBAction func Semail(_ sender: Any) {

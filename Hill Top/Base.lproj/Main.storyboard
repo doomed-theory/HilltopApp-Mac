@@ -220,6 +220,12 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="bib-Uj-vzu">
                                     <items>
+                                        <menuItem title="New Window" id="V4p-Vx-WRz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <segue destination="XfG-lQ-9wD" kind="show" id="EiX-mO-vWO"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="HmO-Ls-i7Q"/>
@@ -383,63 +389,17 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Hill_Top" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-121" y="-383"/>
+            <point key="canvasLocation" x="-165" y="-449"/>
         </scene>
         <!--MainView-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController title="MainView" showSeguePresentationStyle="single" id="XfG-lQ-9wD" customClass="myViewController" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController title="MainView" storyboardIdentifier="mainView" showSeguePresentationStyle="single" id="XfG-lQ-9wD" customClass="myViewController" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" identifier="main" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button wantsLayer="YES" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-YP-GiQ">
-                                <rect key="frame" x="201" y="332" width="174" height="101"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="7gy-NQ-HbE"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Z9L-iV-uEi"/>
-                                    <constraint firstAttribute="width" constant="162" id="dd8-Db-XT5"/>
-                                    <constraint firstAttribute="height" constant="90" id="obw-eQ-m4j"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="rKK-Jf-Gb9"/>
-                                </constraints>
-                                <buttonCell key="cell" type="push" title="Teachers" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4UU-W8-x4R">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system" size="20"/>
-                                    <string key="keyEquivalent">T</string>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="Temail:" target="XfG-lQ-9wD" id="y3G-Px-34K"/>
-                                    <segue destination="G5F-TB-h1L" kind="show" id="B2n-fx-bW5"/>
-                                </connections>
-                            </button>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-fR-kw8">
-                                <rect key="frame" x="393" y="339" width="200" height="90"/>
-                                <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qdt-8k-YNe">
-                                        <rect key="frame" x="-6" y="-7" width="212" height="101"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="CVg-i2-eT8"/>
-                                            <constraint firstAttribute="width" constant="200" id="IFg-2w-qAB"/>
-                                            <constraint firstAttribute="height" constant="90" id="XR9-Lf-ea0"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="push" title="Students" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pu0-mK-sq1">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system" size="20"/>
-                                            <string key="keyEquivalent">S</string>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="Student:" target="XfG-lQ-9wD" id="6Ke-39-wBn"/>
-                                            <segue destination="xid-hy-HKm" kind="show" id="uSs-q2-Zrk"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-Cp-Mtg">
                                 <rect key="frame" x="13" y="756" width="8" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -470,12 +430,59 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-YP-GiQ">
+                                <rect key="frame" x="201" y="252" width="174" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="7gy-NQ-HbE"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Z9L-iV-uEi"/>
+                                    <constraint firstAttribute="width" constant="162" id="dd8-Db-XT5"/>
+                                    <constraint firstAttribute="height" constant="90" id="obw-eQ-m4j"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="rKK-Jf-Gb9"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Teachers" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4UU-W8-x4R">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <string key="keyEquivalent">T</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="Temail:" target="XfG-lQ-9wD" id="y3G-Px-34K"/>
+                                    <segue destination="G5F-TB-h1L" kind="show" id="B2n-fx-bW5"/>
+                                </connections>
+                            </button>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-fR-kw8">
+                                <rect key="frame" x="393" y="259" width="200" height="90"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qdt-8k-YNe">
+                                        <rect key="frame" x="-6" y="-7" width="212" height="101"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="CVg-i2-eT8"/>
+                                            <constraint firstAttribute="width" constant="200" id="IFg-2w-qAB"/>
+                                            <constraint firstAttribute="height" constant="90" id="XR9-Lf-ea0"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Students" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pu0-mK-sq1">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="20"/>
+                                            <string key="keyEquivalent">S</string>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="Student:" target="XfG-lQ-9wD" id="6Ke-39-wBn"/>
+                                            <segue destination="xid-hy-HKm" kind="show" id="uSs-q2-Zrk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Gcc-fR-kw8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="393" id="C7g-ZK-Nrr"/>
                             <constraint firstItem="Gcc-fR-kw8" firstAttribute="leading" secondItem="F3b-YP-GiQ" secondAttribute="trailing" constant="24" id="ZOM-vk-Sad"/>
                             <constraint firstItem="Gcc-fR-kw8" firstAttribute="top" secondItem="F3b-YP-GiQ" secondAttribute="top" id="neO-4d-rWw"/>
-                            <constraint firstItem="F3b-YP-GiQ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="281" id="v75-6A-dOe"/>
+                            <constraint firstItem="F3b-YP-GiQ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="419" id="v75-6A-dOe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -489,7 +496,6 @@
                         <outlet property="wv" destination="Hd6-7D-mGM" id="wSb-n5-am2"/>
                     </connections>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-82" y="78"/>
         </scene>
@@ -524,7 +530,7 @@
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="SCa:" target="xid-hy-HKm" id="cye-nF-WVn"/>
+                                    <action selector="Scal:" target="xid-hy-HKm" id="o6Y-Wu-cv2"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0U-rS-jBd">

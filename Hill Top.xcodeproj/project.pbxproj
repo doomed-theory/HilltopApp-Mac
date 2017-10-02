@@ -12,6 +12,7 @@
 		214070B81F815A7D00D52EA7 /* Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214070B71F815A7C00D52EA7 /* Include.swift */; };
 		214070BA1F81605300D52EA7 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 214070B91F81605300D52EA7 /* web */; };
 		214070BC1F81647E00D52EA7 /* hilltop2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 214070BB1F81647E00D52EA7 /* hilltop2.jpg */; };
+		214070BE1F825FFF00D52EA7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214070BD1F825FFF00D52EA7 /* WebKit.framework */; };
 		21C513CA1F791F6F002163F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513C91F791F6F002163F5 /* AppDelegate.swift */; };
 		21C513CC1F791F6F002163F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C513CB1F791F6F002163F5 /* ViewController.swift */; };
 		21C513CF1F791F6F002163F5 /* Hill_Top.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21C513CD1F791F6F002163F5 /* Hill_Top.xcdatamodeld */; };
@@ -46,6 +47,7 @@
 		214070B71F815A7C00D52EA7 /* Include.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Include.swift; path = "Hill Top/Include.swift"; sourceTree = "<group>"; };
 		214070B91F81605300D52EA7 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
 		214070BB1F81647E00D52EA7 /* hilltop2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hilltop2.jpg; sourceTree = "<group>"; };
+		214070BD1F825FFF00D52EA7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		21C513C61F791F6E002163F5 /* Hill Top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hill Top.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C513C91F791F6F002163F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C513CB1F791F6F002163F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214070BE1F825FFF00D52EA7 /* WebKit.framework in Frameworks */,
 				214070B41F7E68CF00D52EA7 /* AppKit.framework in Frameworks */,
 				21C513F91F79201F002163F5 /* Cocoa.framework in Frameworks */,
 			);
@@ -150,6 +153,7 @@
 		21C513F71F79201F002163F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				214070BD1F825FFF00D52EA7 /* WebKit.framework */,
 				214070B31F7E68CF00D52EA7 /* AppKit.framework */,
 				21C513F81F79201F002163F5 /* Cocoa.framework */,
 			);
@@ -439,12 +443,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Hill Top/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-Top";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -453,12 +460,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Hill Top/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "jkeller.org.hilltopprep.Hill-Top";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
