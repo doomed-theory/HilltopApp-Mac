@@ -51,6 +51,23 @@ class admin: NSViewController {
 
 }
     class admmain: NSViewController {
+        internal var parentsisClicked :Bool=false
+        @IBOutlet var parents: NSButton!
+        @IBAction func parentsClicked(_ sender: NSButton) {
+            parentsisClicked =
+                 {
+                    switch sender.state {
+                    case NSOnState: return true
+                    case NSOffState: return false
+                    default: return false
+                    }
+
+            }()
+            print(parentsisClicked)
+            
+            
+        }
+
         @IBOutlet var wv: WKWebView!
         @IBOutlet var submitbutton: NSPopUpButton!
         override func viewWillAppear() {
@@ -61,7 +78,7 @@ class admin: NSViewController {
             let enteredText :String?=(textarea.string ?? "")
             print(enteredAlert ?? NSError())
             print(enteredText ?? "no text entered")
-            SendEmail.send(enteredAlert!,enteredText!)
+            SendEmail.send(enteredAlert!,enteredText!, includeParents:parentsisClicked)
         }
     @IBOutlet var textarea: NSTextView!
     @IBOutlet var alerting: NSTextField!
@@ -72,9 +89,13 @@ class admin: NSViewController {
 
 }
 class SendEmail: NSObject {
-    static func send(_ subject:String, _ msg: String) {
+    static func send(_ subject:String, _ msg: String, includeParents ip: Bool=false) {
         var maillink :String=""
-        maillink+="mailto:students@hilltopprep.org,faculity@hilltopprep.org?subject="
+        maillink+="mailto:students@hilltopprep.org,faculity@hilltopprep.org"
+        if ip {
+            maillink+=",students@hilltopprep.org"
+        }
+        maillink+="?subject="
         maillink+=subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         maillink+="&body="
         maillink+=msg.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!

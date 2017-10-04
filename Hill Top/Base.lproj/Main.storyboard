@@ -64,7 +64,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="563" height="278"/>
-                                            <size key="maxSize" width="563" height="10000000"/>
+                                            <size key="maxSize" width="565" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
@@ -99,6 +99,7 @@
                                             <menuItem title="school closure or delay" id="2zK-y1-med"/>
                                             <menuItem title="Hill Top Wide Announcement" id="t6p-WS-xKM"/>
                                             <menuItem title="priority" id="3Cp-Bx-1v5"/>
+                                            <menuItem title="Community Meeting" id="LSL-s0-fIS"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
@@ -106,10 +107,22 @@
                                     <action selector="submitalert:" target="UW6-JR-ZGS" id="tge-pb-fML"/>
                                 </connections>
                             </popUpButton>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-4g-OYL">
+                                <rect key="frame" x="382" y="71" width="132" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" title="Include parents" bezelStyle="regularSquare" imagePosition="left" borderStyle="border" inset="2" id="wXB-gN-mlQ">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="parentsClicked:" target="UW6-JR-ZGS" id="qGz-lY-fbj"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="alerting" destination="kcP-T2-6Fk" id="89a-of-ZM9"/>
+                        <outlet property="parents" destination="Aky-4g-OYL" id="xmn-rm-kU3"/>
                         <outlet property="submitbutton" destination="QGs-WC-dhH" id="u9A-xy-1jE"/>
                         <outlet property="textarea" destination="0Qr-BB-NLS" id="mxA-c9-yH4"/>
                         <outlet property="texting" destination="Npf-qf-48E" id="1MS-oa-2wt"/>
@@ -170,7 +183,7 @@
                 </viewController>
                 <customObject id="zoN-mH-yJf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-624.5" y="-563.5"/>
+            <point key="canvasLocation" x="-642" y="-482"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
@@ -401,7 +414,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-Cp-Mtg">
-                                <rect key="frame" x="13" y="756" width="8" height="23"/>
+                                <rect key="frame" x="13" y="598" width="8" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title=" " bezelStyle="rounded" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="I4K-OP-Nne">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -413,14 +426,6 @@
                                     <segue destination="rbN-Pn-Fbv" kind="show" id="mlo-eD-y5s"/>
                                 </connections>
                             </button>
-                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hd6-7D-mGM">
-                                <rect key="frame" x="0.0" y="666" width="800" height="102"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBo-Fu-ZAt">
                                 <rect key="frame" x="88" y="470" width="625" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -477,6 +482,14 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hd6-7D-mGM">
+                                <rect key="frame" x="0.0" y="666" width="800" height="102"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Gcc-fR-kw8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="393" id="C7g-ZK-Nrr"/>
@@ -862,7 +875,7 @@
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-e4-WDH">
-                                <rect key="frame" x="275" y="41" width="528" height="33"/>
+                                <rect key="frame" x="275" y="41" width="528" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="inline" title="Submit" bezelStyle="inline" alignment="center" inset="2" id="H2h-k2-79N">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
