@@ -92,8 +92,11 @@ class SendEmail: NSObject {
     static func send(_ subject:String, _ msg: String, includeParents ip: Bool=false) {
         var maillink :String=""
         maillink+="mailto:students@hilltopprep.org,faculity@hilltopprep.org"
-        if ip {
-            maillink+=",students@hilltopprep.org"
+        print("ip")
+        print(ip)
+        if ip == true {
+            maillink+=",parents@hilltopprep.org"
+            print("ip is true")
         }
         maillink+="?subject="
         maillink+=subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
