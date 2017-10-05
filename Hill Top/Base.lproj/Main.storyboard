@@ -12,7 +12,7 @@
         <scene sceneID="Ix6-Fq-mKa">
             <objects>
                 <viewController id="zgh-zu-w2w" customClass="Help" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="gtc-Vf-bAM">
+                    <view key="view" wantsLayer="YES" id="gtc-Vf-bAM">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -39,7 +39,7 @@
         <scene sceneID="MyE-VL-tLl">
             <objects>
                 <viewController id="UW6-JR-ZGS" customClass="admmain" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" identifier="adminsecret" id="3uv-gG-RJU">
+                    <view key="view" identifier="adminsecret" wantsLayer="YES" id="3uv-gG-RJU">
                         <rect key="frame" x="0.0" y="0.0" width="611" height="563"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -52,7 +52,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npf-qf-48E">
+                            <scrollView wantsLayer="YES" fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npf-qf-48E">
                                 <rect key="frame" x="20" y="118" width="565" height="280"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <clipView key="contentView" ambiguous="YES" id="QFt-zv-Rh8">
@@ -87,7 +87,7 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGs-WC-dhH">
+                            <popUpButton wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGs-WC-dhH">
                                 <rect key="frame" x="225" y="74" width="142" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="School Event" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="oyM-Ls-Lng" id="ywW-Nj-MFj">
@@ -137,7 +137,7 @@
         <scene sceneID="or6-PS-Pg3">
             <objects>
                 <viewController id="rbN-Pn-Fbv" customClass="admin" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="508-am-ZkH">
+                    <view key="view" wantsLayer="YES" id="508-am-ZkH">
                         <rect key="frame" x="0.0" y="0.0" width="273" height="231"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -162,7 +162,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SY-UG-99L">
+                            <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SY-UG-99L">
                                 <rect key="frame" x="96" y="71" width="84" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Access" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5vk-JG-XfU">
@@ -196,13 +196,6 @@
                                 <menu key="submenu" title="Hill Top" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
-                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
-                                        <menuItem title="Services" id="NMo-om-nkz">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
                                         <menuItem title="Hide Hill Top" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
@@ -426,7 +419,7 @@
                                     <segue destination="rbN-Pn-Fbv" kind="show" id="mlo-eD-y5s"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBo-Fu-ZAt">
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBo-Fu-ZAt">
                                 <rect key="frame" x="88" y="470" width="625" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="g2W-6T-jvI">
@@ -454,10 +447,10 @@
                                     <segue destination="G5F-TB-h1L" kind="show" id="B2n-fx-bW5"/>
                                 </connections>
                             </button>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-fR-kw8">
+                            <stackView wantsLayer="YES" distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-fR-kw8">
                                 <rect key="frame" x="393" y="259" width="200" height="90"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qdt-8k-YNe">
+                                    <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qdt-8k-YNe">
                                         <rect key="frame" x="-6" y="-7" width="212" height="101"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="CVg-i2-eT8"/>
