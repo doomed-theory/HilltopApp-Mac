@@ -162,12 +162,15 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SY-UG-99L">
+                            <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SY-UG-99L">
                                 <rect key="frame" x="96" y="71" width="84" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Access" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5vk-JG-XfU">
+                                <buttonCell key="cell" type="push" title="Access" bezelStyle="rounded" imagePosition="overlaps" alignment="center" alternateImage="access" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5vk-JG-XfU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="accessClicked:" target="rbN-Pn-Fbv" id="wDl-qA-MZL"/>
@@ -177,6 +180,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="accessbutton" destination="9SY-UG-99L" id="eCQ-j3-tQO"/>
                         <outlet property="pwdfield" destination="9mw-qq-McQ" id="pfv-WF-4Ft"/>
                         <outlet property="pwdlabel" destination="KE7-Sp-zdM" id="mzf-mE-YDf"/>
                     </connections>
@@ -1299,6 +1303,9 @@ DQ
             <point key="canvasLocation" x="-699" y="1221"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="access" width="0.88630533218383789" height="0.25850573182106018"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JtG-eb-5pc"/>
         <segue reference="AHu-TU-7Db"/>

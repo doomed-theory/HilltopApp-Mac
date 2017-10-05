@@ -11,6 +11,7 @@ import WebKit
 class admin: NSViewController {
     @IBOutlet var pwdlabel: NSTextField!
     @IBOutlet var pwdfield: NSSecureTextField!
+    @IBOutlet var accessbutton: NSButton!
     @IBAction func accessClicked(_ sender: Any) {
         let passwordEntered :String
         let passwordCorrect :String="Fab*1964"
@@ -26,6 +27,9 @@ class admin: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window?.title="Hill Top App: Administrative Panel Locked"
+                accessbutton.imagePosition=NSCellImagePosition.imageOnly
+        accessbutton.image=NSImage(named: "access.jpg")
+       // accessbutton.stringValue=""
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         var pwd: String {
@@ -42,6 +46,12 @@ class admin: NSViewController {
             return false
         }
 
+    }
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        accessbutton.imagePosition=NSCellImagePosition.imageOnly
+        accessbutton.image=NSImage(named: "access.jpg")
+       // accessbutton.stringValue=""
     }
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
             self.dismiss(nil)
