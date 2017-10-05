@@ -54,6 +54,12 @@ class admin: NSViewController {
         internal var parentsisClicked :Bool=false
         @IBOutlet var parents: NSButton!
         @IBAction func parentsClicked(_ sender: NSButton) {
+            if parentsisClicked==true {
+                parents.image = NSImage(named: "unchecked.jpg")
+            }
+            else {
+                parents.image = NSImage(named: "checked.jpg")
+            }
             parentsisClicked =
                  {
                     switch sender.state {
@@ -64,7 +70,6 @@ class admin: NSViewController {
 
             }()
             print(parentsisClicked)
-            
             
         }
 
