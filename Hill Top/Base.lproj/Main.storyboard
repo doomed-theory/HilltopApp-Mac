@@ -138,12 +138,47 @@
             <objects>
                 <viewController id="rbN-Pn-Fbv" customClass="admin" customModule="Hill_Top" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="508-am-ZkH">
-                        <rect key="frame" x="0.0" y="0.0" width="273" height="231"/>
+                        <rect key="frame" x="0.0" y="0.0" width="449" height="207"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <secureTextField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-qq-McQ">
-                                <rect key="frame" x="21" y="107" width="230" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-Sp-zdM">
+                                <rect key="frame" x="176" y="113" width="98" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter Password" id="TeP-if-PsD">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FdA-xZ-HQC">
+                                <rect key="frame" x="130" y="54" width="190" height="21"/>
+                                <subviews>
+                                    <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9SY-UG-99L">
+                                        <rect key="frame" x="-6" y="-7" width="202" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="ypk-hJ-yQm"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Access" bezelStyle="rounded" image="access" imagePosition="only" alignment="center" alternateImage="access" borderStyle="border" inset="2" id="5vk-JG-XfU">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="accessClicked:" target="rbN-Pn-Fbv" id="wDl-qA-MZL"/>
+                                            <segue destination="UW6-JR-ZGS" kind="show" id="6GA-ey-tGL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <secureTextField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-qq-McQ">
+                                <rect key="frame" x="21" y="83" width="408" height="22"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Jv0-Ch-0NN">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -153,31 +188,18 @@
                                     </allowedInputSourceLocales>
                                 </secureTextFieldCell>
                             </secureTextField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-Sp-zdM">
-                                <rect key="frame" x="88" y="137" width="98" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter Password" id="TeP-if-PsD">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SY-UG-99L">
-                                <rect key="frame" x="96" y="71" width="84" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Access" bezelStyle="rounded" imagePosition="overlaps" alignment="center" alternateImage="access" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5vk-JG-XfU">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="accessClicked:" target="rbN-Pn-Fbv" id="wDl-qA-MZL"/>
-                                    <segue destination="UW6-JR-ZGS" kind="show" id="6GA-ey-tGL"/>
-                                </connections>
-                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9mw-qq-McQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Jqf-k1-MOu"/>
+                            <constraint firstItem="FdA-xZ-HQC" firstAttribute="centerX" secondItem="508-am-ZkH" secondAttribute="centerX" id="MXj-85-Tlm"/>
+                            <constraint firstItem="FdA-xZ-HQC" firstAttribute="centerX" secondItem="9mw-qq-McQ" secondAttribute="centerX" id="Mum-WD-ui7"/>
+                            <constraint firstItem="9mw-qq-McQ" firstAttribute="top" secondItem="KE7-Sp-zdM" secondAttribute="bottom" constant="8" symbolic="YES" id="PAl-ET-xdP"/>
+                            <constraint firstItem="FdA-xZ-HQC" firstAttribute="top" secondItem="9mw-qq-McQ" secondAttribute="bottom" constant="8" symbolic="YES" id="SCL-ms-ihY"/>
+                            <constraint firstAttribute="bottom" secondItem="FdA-xZ-HQC" secondAttribute="bottom" constant="54" id="afE-JQ-GsG"/>
+                            <constraint firstItem="FdA-xZ-HQC" firstAttribute="top" secondItem="508-am-ZkH" secondAttribute="top" constant="132" id="jWh-2z-e4m"/>
+                            <constraint firstItem="FdA-xZ-HQC" firstAttribute="leading" secondItem="508-am-ZkH" secondAttribute="leading" constant="130" id="jiM-2Z-dQS"/>
+                            <constraint firstItem="FdA-xZ-HQC" firstAttribute="centerX" secondItem="KE7-Sp-zdM" secondAttribute="centerX" id="n0D-Ye-h4l"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="accessbutton" destination="9SY-UG-99L" id="eCQ-j3-tQO"/>
@@ -187,7 +209,7 @@ DQ
                 </viewController>
                 <customObject id="zoN-mH-yJf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642" y="-482"/>
+            <point key="canvasLocation" x="-603.5" y="-482.5"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
@@ -1304,7 +1326,7 @@ DQ
         </scene>
     </scenes>
     <resources>
-        <image name="access" width="0.88630533218383789" height="0.25850573182106018"/>
+        <image name="access" width="207" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JtG-eb-5pc"/>

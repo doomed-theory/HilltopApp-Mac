@@ -51,6 +51,7 @@ class admin: NSViewController {
         super.viewWillAppear()
         accessbutton.imagePosition=NSCellImagePosition.imageOnly
         accessbutton.image=NSImage(named: "access.jpg")
+
        // accessbutton.stringValue=""
     }
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
