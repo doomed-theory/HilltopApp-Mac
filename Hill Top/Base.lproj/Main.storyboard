@@ -1038,7 +1038,7 @@ DQ
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiB-b8-zu6">
-                                <rect key="frame" x="159" y="671" width="532" height="48"/>
+                                <rect key="frame" x="161" y="671" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="First Period" drawsBackground="YES" id="LlQ-zx-ea3">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1047,7 +1047,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtC-FN-lXr">
-                                <rect key="frame" x="159" y="615" width="532" height="48"/>
+                                <rect key="frame" x="161" y="615" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Second Period" drawsBackground="YES" id="OHJ-8H-I4Q">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1059,7 +1059,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70P-4x-TRn">
-                                <rect key="frame" x="159" y="503" width="532" height="48"/>
+                                <rect key="frame" x="161" y="503" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Third Period" drawsBackground="YES" id="xLK-Nb-ryi">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1071,7 +1071,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpo-Xg-bvH">
-                                <rect key="frame" x="159" y="447" width="532" height="48"/>
+                                <rect key="frame" x="161" y="447" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fourth Period" drawsBackground="YES" id="Tsx-BV-Gwk">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1083,7 +1083,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQ8-qG-oTM">
-                                <rect key="frame" x="159" y="335" width="532" height="48"/>
+                                <rect key="frame" x="161" y="335" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fifth Period" drawsBackground="YES" id="8SA-cO-olo">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1095,7 +1095,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr1-KT-IZq">
-                                <rect key="frame" x="159" y="279" width="532" height="48"/>
+                                <rect key="frame" x="161" y="279" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Sixth Period" drawsBackground="YES" id="yh6-jJ-71o">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1107,7 +1107,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5P6-nQ-yd2">
-                                <rect key="frame" x="159" y="223" width="532" height="48"/>
+                                <rect key="frame" x="161" y="223" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Seventh Period" drawsBackground="YES" id="Gvm-57-9l8">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1119,7 +1119,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-Fa-XWL">
-                                <rect key="frame" x="159" y="391" width="532" height="48"/>
+                                <rect key="frame" x="161" y="391" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Mentor Period" drawsBackground="YES" id="4fG-5W-Y5i">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1131,7 +1131,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-cO-2Qk">
-                                <rect key="frame" x="159" y="559" width="532" height="48"/>
+                                <rect key="frame" x="161" y="559" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Community Meeting" drawsBackground="YES" id="ncx-ro-2Jb">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1143,7 +1143,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-gl-dKe">
-                                <rect key="frame" x="159" y="167" width="532" height="48"/>
+                                <rect key="frame" x="161" y="167" width="528" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Activity Period" drawsBackground="YES" id="uQV-9f-auL">
                                     <font key="font" metaFont="system" size="40"/>
@@ -1191,7 +1191,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-dr-BwP">
-                                <rect key="frame" x="-2" y="503" width="170" height="48"/>
+                                <rect key="frame" x="0.0" y="503" width="166" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="10:10-10:50" placeholderString="10:10-10:50" drawsBackground="YES" id="3F2-SV-c85">
                                     <font key="font" metaFont="system" size="30"/>
@@ -1203,7 +1203,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sz-IW-zrC">
-                                <rect key="frame" x="-2" y="447" width="170" height="48"/>
+                                <rect key="frame" x="0.0" y="447" width="166" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="10:50-11:30" placeholderString="10:50-11:30" drawsBackground="YES" id="6qo-D0-2fa">
                                     <font key="font" metaFont="system" size="30"/>
@@ -1215,7 +1215,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2I-Xx-WII">
-                                <rect key="frame" x="-2" y="391" width="170" height="48"/>
+                                <rect key="frame" x="0.0" y="391" width="166" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="11:30-12:40" placeholderString="11:30-12:40" drawsBackground="YES" id="ao2-Xx-isM">
                                     <font key="font" metaFont="system" size="30"/>
@@ -1251,7 +1251,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-pM-Dyp">
-                                <rect key="frame" x="-2" y="223" width="170" height="48"/>
+                                <rect key="frame" x="0.0" y="223" width="166" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2:00-2:40" drawsBackground="YES" id="epX-hd-K8F">
                                     <font key="font" metaFont="system" size="30"/>
@@ -1263,7 +1263,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tY-Mc-VuO">
-                                <rect key="frame" x="-2" y="167" width="170" height="48"/>
+                                <rect key="frame" x="0.0" y="167" width="166" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2:40-3:20" placeholderString="2:40-3:20" drawsBackground="YES" id="v47-4m-2KK">
                                     <font key="font" metaFont="system" size="30"/>
