@@ -211,6 +211,33 @@ DQ
             </objects>
             <point key="canvasLocation" x="-603.5" y="-482.5"/>
         </scene>
+        <!--Credits Class-->
+        <scene sceneID="UuA-hX-Rev">
+            <objects>
+                <viewController id="5uu-p1-Wji" customClass="creditsClass" sceneMemberID="viewController">
+                    <view key="view" id="nrI-Ew-RgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsg-LC-Ulz">
+                                <rect key="frame" x="74" y="61" width="249" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="hXv-MF-rCO">
+                                    <font key="font" metaFont="system" size="29"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="myMainMan" destination="vsg-LC-Ulz" id="5Pe-j4-9U8"/>
+                    </connections>
+                </viewController>
+                <customObject id="Wom-zY-tlO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="-736"/>
+        </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
             <objects>
@@ -222,6 +249,13 @@ DQ
                                 <menu key="submenu" title="Hill Top" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Credits" keyEquivalent="`" id="UoH-Ta-MG6">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="5L8-ON-Fdf"/>
+                                                <segue destination="5uu-p1-Wji" kind="show" id="xHE-oS-3OP"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Hide Hill Top" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>

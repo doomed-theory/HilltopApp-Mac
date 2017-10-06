@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import AppKit
+
+class creditsClass :NSViewController {
+    @IBOutlet var myMainMan: NSTextField!
+    override func viewDidLoad() {
+        myMainMan.stringValue="Justin Keller, C)PTE, ACTC, ACMT, ACSP -- Lead Developer, Project Manager\n"
+        myMainMan.stringValue+="Matthew Kleiner -- Developer\n"
+        myMainMan.stringValue+="Ryan Wellock -- Chief Designer"
+        
+    }
+}
