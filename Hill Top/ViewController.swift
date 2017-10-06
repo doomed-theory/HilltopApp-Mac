@@ -52,9 +52,10 @@ class myViewController: NSViewController {
 
     }
     override func viewDidDisappear() {
+        
     }
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        self.view.window?.close()
+        //self.view.window?.close()
     }
     func getTimeOfDate() {
         let curDate = Date()
@@ -92,6 +93,9 @@ class teacherview: NSViewController {
     including.displayHeader(wv)
     including.setBackground(self.view)
     }
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        self.view.window?.close()
+    }
     
 
 }
@@ -125,10 +129,16 @@ class studentview: NSViewController {
     override func viewWillAppear() {
     including.displayHeader(wv)
     }
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        //self.view.window?.close()
+    }
     
 }
 
 class schedview: NSViewController {
+    override func viewWillAppear() {
+        including.setBackground(self.view)
+    }
    //static elements
     @IBOutlet var a: NSTextField!
     @IBOutlet var b: NSTextField!
