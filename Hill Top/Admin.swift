@@ -63,6 +63,13 @@ class admin: NSViewController {
 }
     class admmain: NSViewController {
         internal var parentsisClicked :Bool=false
+        @IBAction func clearClicked(_ sender: Any) {
+                UserDefaults.standard.set("", forKey:"savedAlert")
+            textarea.string=""
+        }
+        @IBAction func saveClicked(_ sender: Any) {
+                UserDefaults.standard.set(textarea.string, forKey: "savedAlert")
+        }
         @IBOutlet var parents: NSButton!
         @IBAction func parentsClicked(_ sender: NSButton) {
             if parentsisClicked==true {
@@ -88,6 +95,11 @@ class admin: NSViewController {
         @IBOutlet var submitbutton: NSPopUpButton!
         override func viewWillAppear() {
         including.displayHeader(wv)
+        }
+        override func viewDidAppear() {
+            if let savedText=UserDefaults.standard.string(forKey: "savedAlert") {
+                textarea.string=savedText
+            }
         }
         @IBAction func submitalert(_ sender: Any) {
             let enteredAlert=submitbutton.titleOfSelectedItem
