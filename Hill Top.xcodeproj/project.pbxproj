@@ -240,7 +240,7 @@
 				TargetAttributes = {
 					21C513C51F791F6E002163F5 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					21C513D91F791F6F002163F5 = {
 						CreatedOnToolsVersion = 8.3.3;
