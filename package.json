@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "electron": "^1.7.8",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1"
+  },
+  "scripts": {
+    "start": "./node_modules/electron/dist/Electron.app/Contents/MacOS/Electron ."
+  }
+}
