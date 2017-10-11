@@ -57,7 +57,7 @@ app.on('activate', () => {
 const fs = require('fs');
 const remindersEnabler = require('./js/background/reminders');
 
-let reminders = [];
+let reminders = undefined;
 
 try {
   reminders = JSON.parse(fs.readFileSync('./data/reminders.json'));

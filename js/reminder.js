@@ -1,4 +1,5 @@
 const fs = require('fs'),
+      Reminder = require('../js/lib/reminder').Reminder,
       remindersEnabler = require(`../js/background/reminders`);
 
 let $remindersList = $('#reminders'),
@@ -21,6 +22,7 @@ $addReminderButton.click(() => {
       <input class="title" type="text" value="New Reminder">
       <br>
       <input class="datepicker" type="text">
+      <span class="valid-date-time-label"></span>
     </form>
     <select class="hour">
       ${getNumOptions(1, 12)}
@@ -47,19 +49,19 @@ $addReminderButton.click(() => {
   })
   .parent()
   .find('.datepicker')
-  .datepicker()
-  .datepicker(/*'option', 'dateFormat', 'DD, d MM, yy'*/);
+  .datepicker();
 });
 
 function loadReminders(reminders) {
   $remindersList.html("");
-  reminders.forEach((reminder, i) => {
+  reminders.reminders.forEach((reminder, i) => {
     $remindersList.append(
     `<li class="reminder">
       <form>
         <input class="title" type="text" value="${reminder.title}" disabled>
         <br>
         <input class="datepicker" type="text" value="${reminder.date}" disabled>
+        <span class="valid-date-time-label"></span>
       </form>
       <select class="hour" disabled>
         ${getNumOptions(1, 12)}
@@ -90,26 +92,25 @@ function loadReminders(reminders) {
     .val(reminder.period)
     .parent()
     .find('.datepicker')
-    .datepicker()
-    .datepicker(/*'option', 'dateFormat' 'DD, d MM, yy'*/);
+    .datepicker();
   });
 }
 
 function setReminder(reminders, $reminder) {
-  let reminder = {
+  let reminder = new Reminder({
     title: $reminder.find(`input.title`).val(),
     date: $reminder.find(`input.datepicker`).val(),
     hour: $reminder.find(`select.hour`).val(),
     minute: $reminder.find(`select.minute`).val(),
     period: $reminder.find(`select.period`).val()
-  };
-  reminder.formattedDateTime = `${reminder.date} ${reminder.hour}:${reminder.minute}:00 ${reminder.period}`;
-  reminder.dateTimeMillis = Date.parse(reminder.formattedDateTime);
-  if (reminder.date && Date.parse(reminder.date)) {
+  });
+  let $validDateTimeLabel = $reminder.find('.valid-date-time-label');
+  if (reminder.date && Date.parse(reminder.date) && reminder.dateTimeMillis >= Date.now()) {
+    $validDateTimeLabel.html('');
     if (reminders[$reminder.index()]) {
       reminders[$reminder.index()] = reminder;
     } else {
-      reminders.push(reminder);
+      reminders.reminders.push(reminder);
     }
     saveReminders(reminders);
     let date = new Date(Date.parse(reminder.date));
@@ -120,15 +121,20 @@ function setReminder(reminders, $reminder) {
     $reminder.find('.hour').prop('disabled', true);
     $reminder.find('.minute').prop('disabled', true);
     $reminder.find('.period').prop('disabled', true);
-    remindersEnabler.enable(reminders[reminders.length - 1]);
+    reminders.reminders[reminders.reminders.length - 1].startWait();
   } else {
-    $reminder.find('.datepicker').val('Invalid Date.');
+    $validDateTimeLabel.html('Invalid Date/Time.');
   }
 }
 
 function removeReminder(reminders, $reminder) {
+  let reminderIndex = $reminder.index(),
+      reminder = reminders.reminders[reminderIndex];
+  if (reminder) {
+    reminders.remove(reminderIndex);
+    //reminders.reminders.splice($reminder.index(), 1);
+  }
   $reminder.remove();
-  reminders.splice($reminder.index(), 1);
   saveReminders(reminders);
   if ($addReminderButton.prop("disabled")) {
     $addReminderButton.prop("disabled", false);
@@ -149,9 +155,12 @@ function formatMinute(num) {
 }
 
 function saveReminders(reminders, path = './data/reminders.json') {
-  fs.writeFileSync(path, JSON.stringify(reminders));
+  let updatedReminders = reminders.reminders.filter(reminder => {
+    return reminder.dateTimeMillis - Date.now() >= 0;
+  });
+  fs.writeFileSync(path, JSON.stringify(updatedReminders));
 }
 
-function getReminders(path = "./data/reminders.json") {
-  return JSON.parse(fs.readFileSync(path));
+function getReminders() {
+  return remindersEnabler.reminders;
 }
