@@ -4,7 +4,8 @@
   "dependencies": {
     "electron": "^1.7.8",
     "jquery": "^3.2.1",
-    "jquery-ui": "^1.12.1"
+    "jquery-ui": "^1.12.1",
+    "node-notifier": "^5.1.2"
   },
   "scripts": {
     "start-electron": "./node_modules/electron/dist/Electron.app/Contents/MacOS/Electron .",

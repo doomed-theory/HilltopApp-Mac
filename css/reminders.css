@@ -1,0 +1,66 @@
+#reminders {
+   list-style-type: none;
+   padding: 0;
+}
+
+#content {
+    text-align: center;
+}
+
+.reminder, #add-reminder {
+    margin: 10px;
+    border: 1px dashed white;
+    width: 220px;
+    padding: 25px;
+    height: 120px;
+    border-radius: 30px;
+    text-align: center;
+    background: rgba(55, 55, 142, 0.75);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#add-reminder {
+    width: 272px;
+    height: 272px;
+    color: white;
+    padding: 25px;
+    background: rgba(55, 55, 142, 0.75);
+}
+
+#add-reminder:disabled {
+    background: rgba(145, 145, 232, 0.5);
+}
+
+.reminder input {
+    margin: 7px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+}
+
+.reminder input:disabled {
+    background: none;
+    color: white;
+    font-size: 17px;
+}
+
+.reminder select {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+}
+
+.reminder select:disabled {
+    background: none;
+    border: none;
+    color: lightgrey;
+}
+
+.set-reminder, .remove-reminder {
+    border: none;
+    background: none;
+    color: white;
+    text-decoration: underline;
+}

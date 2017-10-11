@@ -50,3 +50,17 @@ hr {
   text-align: center;
   text-decoration: none;
 }
+
+#back {
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  color: midnightblue;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+  position: relative;
+}

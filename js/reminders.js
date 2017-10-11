@@ -20,7 +20,6 @@ $addReminderButton.click(() => {
 `<li class="reminder">
     <form>
       <input class="title" type="text" value="New Reminder">
-      <br>
       <input class="datepicker" type="text">
       <span class="valid-date-time-label"></span>
     </form>
@@ -59,7 +58,6 @@ function loadReminders(reminders) {
     `<li class="reminder">
       <form>
         <input class="title" type="text" value="${reminder.title}" disabled>
-        <br>
         <input class="datepicker" type="text" value="${reminder.date}" disabled>
         <span class="valid-date-time-label"></span>
       </form>

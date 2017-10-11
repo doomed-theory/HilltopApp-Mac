@@ -26,8 +26,11 @@ class Reminder {
       let delay = this.dateTimeMillis - Date.now();
       if (delay >= 0) {
         this.timeout = setTimeout(() => {
-          let notification = new Notification("Reminder:", {
-            body: this.title
+
+          notifier.notify({
+            title: "Reminder",
+            message: this.title,
+            icon: `${__dirname}/../../../res/logo.png`
           });
         }, delay);
       }
