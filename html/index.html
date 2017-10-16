@@ -3,20 +3,30 @@
   <link href="../css/index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+  <div id="window-controller">
+    <div id="window-controllers">
+      <button id="minimize-window">_</button><!--
+      --><button id="maximize-window">🗖</button><!--
+      --><button id="close-window">X</button>
+    </div>
+  </div>
   <div id="header">
     <div id="logo-container">
       <img id="logo" width="75" height="75" src="../res/logo.png">
     </div><h1 id="school-name-header">Hill Top Preparatory School</h1>
     <!-- <hr><h3 id="welcome">Welcome!</h3><hr> -->
   </div>
-  <!-- <div id="blur"></div> -->
   <div id="content">
     <div id="feature-links">
-      <a href="./pcr.html">PCR</a>
-      <a href="./schedule.html">Schedule</a>
-      <a href="./reminder.html">Reminders</a>
-      <a href="./notes.html">Notes</a>
+      <a class="primary-button-theme" href="./student-portal.html">Student Portal</a>
+      <a class="primary-button-theme" href="./parent-portal.html">Parent Portal</a>
+      <!-- <a class="primary-button-theme" href="./faculty-portal.html">Faculty Portal</a> -->
+      <a class="primary-button-theme" href="./schedule.html">Schedule</a>
+      <a class="primary-button-theme" href="./reminder.html">Reminders</a>
+      <a class="primary-button-theme" href="./notes.html">Notes</a>
     </div>
   </div>
+  <script>window.$ = window.jQuery = require('jquery')</script>
+  <script src="../js/window-controller.js"></script>
 </body>
 </html>

@@ -1,12 +1,14 @@
-const fs = require('fs');
+const fs = require('fs'),
+      {Note} = require('./lib/note');
 
-let notes = getNotes();
+let notes = require('./data/notes');
 
 
 loadNotes(notes);
 
 $('#add-note-button').click(() => {
-  $('#notes').append(getNoteHTML("New Note", ""))
+  let note = new Note("New Note", "");
+  $('#notes').append(getNoteHTML(note))
   .find('.note')
   .last()
   .find('.save-note-button')
@@ -18,32 +20,29 @@ $('#add-note-button').click(() => {
   .click(function() {
     deleteNoteButtonAction($(this), notes);
   });
-  notes.push({
-    title:"New Note",
-    content: ""
-  });
+  notes.push(note);
   saveNotes(notes);
 });
 
-function getNoteHTML(title, content) {
+function getNoteHTML(note) {
   return `<li class="note">
     <form>
-      <input type="text" value="${title}">
+      <input type="text" value="${note.title}">
     </form>
-    <textarea rows="20" cols="50">${content}</textarea>
+    <textarea rows="20" cols="50">${note.content}</textarea>
     <br>
     <button class="save-note-button">Save</button>
     <button class="delete-note-button">Delete</button>`;
 }
 
 function saveNotes(notes, path = "./data/notes.json") {
-  fs.writeFileSync(path, JSON.stringify(notes));
+  fs.writeFileSync(path, JSON.stringify(notes.map(note => note.json)));
 }
 
 function loadNotes(notes) {
   let notesHTML = "";
   notes.forEach(note => {
-    notesHTML += getNoteHTML(note.title, note.content);
+    notesHTML += getNoteHTML(note);
   });
   $('#notes')
   .html(notesHTML)
@@ -62,40 +61,22 @@ function saveNoteButtonAction($saveNoteButton, notes) {
   let $updatedNote = $saveNoteButton.parent(),
       noteIndex = $updatedNote.index();
 
-  notes[noteIndex] = {
-    title: $updatedNote.find('input').val(),
-    content: $updatedNote.find('textarea').val()
-  };
+  notes[noteIndex] = new Note($updatedNote.find('input').val(), $updatedNote.find('textarea').val());
   saveNotes(notes);
-  updateNotesList();
+  updateNotesList(notes);
 }
 
 function deleteNoteButtonAction($deleteNoteButton, notes) {
   let $noteToDelete = $deleteNoteButton.parent(),
       noteIndex = $noteToDelete.index();
 
-  console.log(noteIndex, notes + "");
-
   notes.splice(noteIndex, 1);
-  console.log(notes + '');
   $noteToDelete.remove();
 
   saveNotes(notes);
-  updateNotesList();
+  updateNotesList(notes);
 }
 
-function getNotes(path = './data/notes.json') {
-  let notes = [];
-
-  try {
-    notes = JSON.parse(fs.readFileSync(path));
-  } catch (err) {
-    console.log(`Error parsing notes!\n${err.stack}`);
-  }
-
-  return notes;
-}
-
-function updateNotesList() {
-  notes = getNotes();
+function updateNotesList(updatedNotes) {
+  notes = updatedNotes;
 }

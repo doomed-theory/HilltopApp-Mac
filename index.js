@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path');
 const url = require('url');
 
@@ -8,7 +8,7 @@ let win;
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({width: 1000, height: 800})
+  win = new BrowserWindow({width: 1200, height: 900, frame: false})
 
   // and load the index.html of the app.
   win.loadURL(url.format({
@@ -55,14 +55,14 @@ app.on('activate', () => {
 // code. You can also put them in separate files and require them here.
 
 const fs = require('fs');
-const remindersEnabler = require('./js/background/reminders');
+const remindersEnabler = require('./js/data/reminders');
+const Reminder = require('./js/lib/reminder').Reminder;
 
-let reminders = undefined;
+let reminders = require('./js/data/reminders');
 
-try {
-  reminders = JSON.parse(fs.readFileSync('./data/reminders.json'));
-} catch (e) {
-  console.log(`Error parsing reminders!\n${e.stack}`);
-}
+reminders.startWait();
 
-remindersEnabler.enableAll(reminders);
+ipcMain.on('start-reminder-wait', (event, reminderJSON) => {
+  let reminder = new Reminder(reminderJSON);
+  reminder.startWait();
+});

@@ -1,6 +1,6 @@
 #schedule-items {
   background-color: rgb(25, 25, 112);
-  width: 50%;
+  width: 80%;
   margin: 50px auto;
   border-radius: 10px;
   border: 1px dashed white;
@@ -24,9 +24,26 @@
   color: white;
   padding: 0;
   text-decoration: underline;
+  margin: 10px;
+}
+
+.change-schedule-title:hover {
+  color: grey;
 }
 
 .schedule-item {
-  text-align: center;
-  margin: 10px 0 10px 0;
+  text-align: right;;
+  margin: 10px auto 10px auto;
+  width: 650px;
+}
+
+.schedule-item form {
+  width: 200px;
+  margin: auto;
+  display: inline-block;
+
+}
+
+.schedule-item span {
+  float: left;
 }

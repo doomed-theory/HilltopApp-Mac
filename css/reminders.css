@@ -3,34 +3,37 @@
    padding: 0;
 }
 
-#content {
-    text-align: center;
-}
-
 .reminder, #add-reminder {
     margin: 10px;
-    border: 1px dashed white;
     width: 220px;
     padding: 25px;
     height: 120px;
     border-radius: 30px;
     text-align: center;
-    background: midnightblue;
     display: inline-block;
     vertical-align: middle;
+}
+
+.reminder {
+    background: midnightblue;
+    border: 1px dashed white;
 }
 
 #add-reminder {
     width: 272px;
     height: 272px;
-    color: white;
     padding: 25px;
-    background: midnightblue/*rgba(55, 55, 142, 0.75)*/;
     font-size: 30px;
 }
 
 #add-reminder:disabled {
-    background: grey/*rgba(145, 145, 232, 0.5)*/;
+    background: grey;
+}
+
+#add-reminder:disabled:hover {
+    background: grey;
+    color: white;
+    border: 1px dashed white;
 }
 
 .reminder input {
@@ -64,4 +67,8 @@
     background: none;
     color: white;
     text-decoration: underline;
+}
+
+.set-reminder:hover, .remove-reminder:hover {
+    color: grey;
 }

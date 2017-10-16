@@ -8,7 +8,6 @@
     "node-notifier": "^5.1.2"
   },
   "scripts": {
-    "start-electron": "./node_modules/electron/dist/Electron.app/Contents/MacOS/Electron .",
     "start": "electron ."
   }
 }

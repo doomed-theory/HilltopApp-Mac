@@ -1,16 +1,11 @@
 const fs = require('fs'),
-      Reminder = require('../js/lib/reminder').Reminder,
-      remindersEnabler = require(`../js/background/reminders`);
+      electron = require('electron'),
+      {ipcRenderer} = electron,
+      Reminder = require(`${__dirname}/../js/lib/reminder`).Reminder;
 
 let $remindersList = $('#reminders'),
-    reminders = [],
+    reminders = require(`../js/data/reminders`),
     $addReminderButton = $('#add-reminder');
-
-try {
-  reminders = getReminders();
-} catch (e) {
-  console.log(`Error parsing reminders!\n${e.stack}`);
-}
 
 loadReminders(reminders);
 
@@ -119,7 +114,9 @@ function setReminder(reminders, $reminder) {
     $reminder.find('.hour').prop('disabled', true);
     $reminder.find('.minute').prop('disabled', true);
     $reminder.find('.period').prop('disabled', true);
-    reminders.reminders[reminders.reminders.length - 1].startWait();
+    console.log(reminders.reminders);
+    console.log(reminders.reminders[reminders.reminders.length - 1]);
+    ipcRenderer.send('start-reminder-wait', reminders.reminders[reminders.reminders.length - 1]);
   } else {
     $validDateTimeLabel.html('Invalid Date/Time.');
   }
@@ -130,7 +127,6 @@ function removeReminder(reminders, $reminder) {
       reminder = reminders.reminders[reminderIndex];
   if (reminder) {
     reminders.remove(reminderIndex);
-    //reminders.reminders.splice($reminder.index(), 1);
   }
   $reminder.remove();
   saveReminders(reminders);
@@ -159,8 +155,4 @@ function saveReminders(reminders, path = './data/reminders.json') {
     return reminder.json;
   });
   fs.writeFileSync(path, JSON.stringify(updatedReminders));
-}
-
-function getReminders() {
-  return remindersEnabler.reminders;
 }

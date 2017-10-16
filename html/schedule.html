@@ -4,22 +4,32 @@
   <link href="../css/schedule.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <div id="#content">
-    <div id="header">
-      <a id="back" href="./index.html">Back</a><h1>Schedule</h1>
+  <div id="window-controller">
+    <div id="window-controllers">
+      <button id="minimize-window">_</button><!--
+      --><button id="maximize-window">🗖</button><!--
+      --><button id="close-window">X</button>
     </div>
+  </div>
+  <div id="header">
+    <a id="back" href="./index.html">Back</a><h1>Schedule</h1>
+  </div>
+  <div id="#content">
     <ul id="schedule-items">
-      <li class="schedule-item">First Period: <form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="0">Save</button></li>
-      <li class="schedule-item">Second Period: <form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="1">Save</button></li>
-      <li class="schedule-item">Third Period: <form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="2">Save</button></li>
-      <li class="schedule-item">Fourth Period: <form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="3">Save</button></li>
-      <li class="schedule-item">Fifth Period: <form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="4">Save</button></li>
-      <li class="schedule-item">Sixth Period: <form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="5">Save</button></li>
-      <li class="schedule-item">Seventh Period: <form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="6">Save</button></li>
-      <li class="schedule-item">Eigth Period: <form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="7">Save</button></li>
+      <li class="schedule-item"><span>Before School (Before 8:30 AM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="0">Save</button></li>
+      <li class="schedule-item"><span>First Period (8:30 AM - 9:10 AM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="1">Save</button></li>
+      <li class="schedule-item"><span>Second Period (9:10 AM - 9:50 AM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="2">Save</button></li>
+      <li class="schedule-item"><span>Third Period (10:10 AM - 10:50 AM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="3">Save</button></li>
+      <li class="schedule-item"><span>Fourth Period (10:50 AM - 11:30 AM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="4">Save</button></li>
+      <li class="schedule-item"><span>Fifth Period (12:40 PM - 1:20 PM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="5">Save</button></li>
+      <li class="schedule-item"><span>Sixth Period (1:20 PM - 2:00 PM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="6">Save</button></li>
+      <li class="schedule-item"><span>Seventh Period (2:00 PM - 2:40 PM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="7">Save</button></li>
+      <li class="schedule-item"><span>Eigth Period (2:40 PM - 3:20 PM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="8">Save</button></li>
+      <li class="schedule-item"><span>After School (After 3:20 PM):</span><form><input class="schedule-item-title" type="text"></form><button class="change-schedule-title" value="9">Save</button></li>
     </ul>
   </div>
   <script>window.$ = window.jQuery = require('jquery')</script>
+  <script src="../js/window-controller.js"></script>
   <script src="../js/schedule.js"></script>
 </body>
 </html>

@@ -22,12 +22,4 @@ let reminders = new Reminders(remindersJSON.map(reminder => {
   return reminder.dateTimeMillis >= Date.now();
 }));
 
-module.exports = {
-  enableAll: function() {
-    reminders.reminders.forEach(reminder => {
-      reminder.startWait();
-    });
-  }
-}
-
-module.exports.reminders = reminders;
+module.exports = reminders;
