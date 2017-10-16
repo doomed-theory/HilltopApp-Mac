@@ -1,17 +1,24 @@
+html {
+  height: 100%;
+}
+
 body {
-  background-color: midnightblue;
-  background-image: url('../res/backgrounds/hilltop2.jpg');
-  background-position: center;
+  background-color: rgb(20, 20, 20);
+  background: url('../res/backgrounds/hilltop2.jpg') no-repeat center center fixed;
+  /*background-position: center;*/
   color: white;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   background-size: cover;
+  margin: 0;
+  height: 100%;
 }
 
 hr {
   background-color: white;
   height: 1px;
   border: none;
-
+  width: 200px;
+  margin: 0;
 }
 
 #school-name-header {
@@ -24,43 +31,82 @@ hr {
 }
 
 #logo {
+}
+
+/*#blur {
+  height: calc(100% - 121px);
+  width: 100%;
+  background-color: rgba(1, 2, 2, 0.5);
+  background: url('../res/backgrounds/hilltop2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  top: 121px;
+  filter: blur(3px);
+  z-index: -1;
+}*/
+
+#logo-container {
+  width: 100px;
+  height: 75px;
+  background-color: white;
+  text-align: center;
+  display: inline-block;
   vertical-align: middle;
 }
 
 #header {
-  background-color: rgba(25, 25, 112, 0.75);
-  padding: 10px;
+  /*background-color: rgba(25, 25, 112, 0.75);*/
+  /*padding: 10px;*/
+  height: 75px;
 }
+
+#header h1 {
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: middle;
+  background-color: rgb(25, 25, 112);
+  height: 75px;
+  width: calc(100% - 120px);
+  margin: 0;
+  line-height: 75px;
+}
+
+/*#welcome {
+  display: inline;
+}*/
 
 #feature-links {
   margin: auto;
-  margin-top: 50px;
-  width: 200px;
+  margin-top: 150px;
+  width: 100%;
+  text-align: center;
 }
 
 #feature-links a {
-  width: 150px;
-  height: 50px;
-  line-height: 50px;
-  background-color: rgba(25, 25, 112, 0.75);
-  border: none;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  background-color: rgb(25, 25, 112);
+  border: 1px dashed white;
   color: white;
   margin: 4px;
-  display: block;
+  display: inline-block;
   text-align: center;
   text-decoration: none;
+  border-radius: 15px;
 }
 
 #back {
-  height: 50px;
+  height: 75px;
   width: 100px;
   text-align: center;
-  line-height: 50px;
-  display: block;
+  line-height: 75px;
+  display: inline-block;
+  vertical-align: middle;
   color: midnightblue;
   text-decoration: none;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 4px;
-  position: relative;
+  /*border-radius: 10px;*/
+  background-color: white;
+  /*margin-bottom: 4px;*/
+  /*position: relative;*/
 }

@@ -155,6 +155,8 @@ function formatMinute(num) {
 function saveReminders(reminders, path = './data/reminders.json') {
   let updatedReminders = reminders.reminders.filter(reminder => {
     return reminder.dateTimeMillis - Date.now() >= 0;
+  }).map(reminder => {
+    return reminder.json;
   });
   fs.writeFileSync(path, JSON.stringify(updatedReminders));
 }

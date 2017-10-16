@@ -1,6 +1,32 @@
 #schedule-items {
-  background-color: rgba(25, 25, 112, 0.75);
+  background-color: rgb(25, 25, 112);
+  width: 50%;
+  margin: 50px auto;
+  border-radius: 10px;
+  border: 1px dashed white;
   list-style-type: none;
   font-size: 24px;
   padding: 10px;
+}
+
+.schedule-item-title {
+  border: none;
+  background: white;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.change-schedule-title {
+  border: none;
+  background: transparent;
+  color: white;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.schedule-item {
+  text-align: center;
+  margin: 10px 0 10px 0;
 }
