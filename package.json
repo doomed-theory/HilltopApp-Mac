@@ -5,6 +5,7 @@
     "electron": "^1.7.8",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
+    "mousetrap": "^1.6.1",
     "node-notifier": "^5.1.2"
   },
   "scripts": {

@@ -6,27 +6,19 @@
   <link href="../css/reminders.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <div id="window-controller">
-    <div id="window-controllers">
-      <button id="minimize-window">_</button><!--
-      --><button id="maximize-window">🗖</button><!--
-      --><button id="close-window">X</button>
-    </div>
-  </div>
   <div id="header">
     <a id="back" href="./index.html">Back</a><h1>Reminders</h1>
   </div>
   <div id="content">
+    <button id="add-reminder" class="primary-button-theme">Add</button>
     <ul id="reminders">
     </ul>
-    <button id="add-reminder" class="primary-button-theme">Add</button>
   </div>
-  <script>window.$ = window.jQuery = require('jquery')</script>
+  <script src="../js/render/index.js"></script>
   <script
   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
   crossorigin="anonymous"></script>
-  <script src="../js/window-controller.js"></script>
-  <script src="../js/reminders.js"></script>
+  <script src="../js/render/features/reminders.js"></script>
 </body>
 </html>

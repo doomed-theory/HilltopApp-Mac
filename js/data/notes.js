@@ -1,13 +1,8 @@
-const {Note} = require('../lib/note');
+const {Note, Notes} = require('../lib/note');
 
-let notesJSON = [];
+let path = `${__dirname}/../../data/notes.json`,
+    notes = new Notes(path);
 
-try {
-  notesJSON = JSON.parse(fs.readFileSync('./data/notes.json'));
-} catch (err) {
-  console.log(`Error parsing notes!\n${err.stack}`);
-}
-
-let notes = notesJSON.map(note => new Note(note));
+notes.load();
 
 module.exports = notes;

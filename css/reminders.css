@@ -1,12 +1,12 @@
 #reminders {
    list-style-type: none;
    padding: 0;
+   text-align: center;
 }
 
 .reminder, #add-reminder {
     margin: 10px;
     width: 220px;
-    padding: 25px;
     height: 120px;
     border-radius: 30px;
     text-align: center;
@@ -17,13 +17,15 @@
 .reminder {
     background: midnightblue;
     border: 1px dashed white;
+    padding: 25px;
 }
 
 #add-reminder {
-    width: 272px;
-    height: 272px;
-    padding: 25px;
+    margin: auto;
+    width: calc(100% - 20px);
+    height: 75px;
     font-size: 30px;
+    display: block;
 }
 
 #add-reminder:disabled {

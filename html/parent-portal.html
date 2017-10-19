@@ -4,19 +4,13 @@
   <link href="../css/iframe-page.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <div id="window-controller">
-    <div id="window-controllers">
-      <button id="minimize-window">_</button><!--
-      --><button id="maximize-window">🗖</button><!--
-      --><button id="close-window">X</button>
-    </div>
-  </div>
   <div id="header">
     <a id="back" href="./index.html">Back</a><h1>Parent Portal</h1>
   </div>
-  <iframe src="https://webapps.pcrsoft.com/clue/Parent-Portal-Login/11534?returnUrl=https%3a%2f%2fwebapps.pcrsoft.com%2fClue%2fdefault.aspx%3fpid%3d11531"></iframe>
-  <script>window.$ = window.jQuery = require('jquery')</script>
-  <script src="../js/window-controller.js"></script>
-  <script src="../js/iframe.js"></script>
+  <div id="iframe">
+    <iframe src="https://webapps.pcrsoft.com/clue/Parent-Portal-Login/11534?returnUrl=https%3a%2f%2fwebapps.pcrsoft.com%2fClue%2fdefault.aspx%3fpid%3d11531"></iframe>
+  </div>
+  <script src="../js/render/index.js"></script>
+  <script src="../js/render/fetures/iframe.js"></script>
 </body>
 </html>

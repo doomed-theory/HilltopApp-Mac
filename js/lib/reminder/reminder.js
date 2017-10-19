@@ -10,7 +10,10 @@ class Reminder {
     this.formattedDateTime = `${this.date} ${this.hour}:${this.minute}:00 ${this.period}`;
     this.dateTimeMillis = Date.parse(this.formattedDateTime);
     this.timeout = null;
-    this.json = {
+  }
+
+  json() {
+    return {
       title: this.title,
       date: this.date,
       hour: this.hour,
@@ -26,12 +29,12 @@ class Reminder {
       let delay = this.dateTimeMillis - Date.now();
       if (delay >= 0) {
         this.timeout = setTimeout(() => {
-
           notifier.notify({
             title: "Reminder",
             message: this.title,
             icon: `${__dirname}/../../../res/logo.png`
           });
+          require('electron').dialog.showMessageBox({message: `Reminder: ${this.title}`});
         }, delay);
       }
     });

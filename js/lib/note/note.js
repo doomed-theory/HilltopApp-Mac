@@ -2,9 +2,14 @@ class Note {
   constructor({title = "New Note", content = ""}) {
     this.title = title;
     this.content = content;
-    this.json = {
+  }
+
+  json() {
+    return {
       title: this.title,
       content: this.content
     };
   }
 }
+
+module.exports = Note;

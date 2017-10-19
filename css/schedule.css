@@ -32,9 +32,8 @@
 }
 
 .schedule-item {
-  text-align: right;;
+  text-align: center;
   margin: 10px auto 10px auto;
-  width: 650px;
 }
 
 .schedule-item form {
@@ -45,5 +44,7 @@
 }
 
 .schedule-item span {
-  float: left;
+  width: 350px;
+  display: inline-block;
+  text-align: left;
 }
