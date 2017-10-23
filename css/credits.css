@@ -1,0 +1,17 @@
+#content {
+    text-align: center;
+    background: rgba(18, 29, 37, 0.8);
+    padding: 20px;
+}
+
+#background-logo-art {
+    margin: 40px 0;
+}
+
+h2 {
+  color: grey;
+}
+
+h3 {
+    color: lightgrey;
+}

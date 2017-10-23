@@ -16,7 +16,7 @@ module.exports = () => {
       </div>`
   );
 
-  $("#window-controller").sticky({topSpacing: 0});
+  $("#window-bar").sticky({topSpacing: 0});
 
   let win = remote.getCurrentWindow();
 

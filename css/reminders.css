@@ -74,3 +74,8 @@
 .set-reminder:hover, .remove-reminder:hover {
     color: grey;
 }
+
+.valid-date-time-label {
+  margin-top: 10px;
+  display: block;
+}

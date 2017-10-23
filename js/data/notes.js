@@ -1,6 +1,7 @@
-const {Note, Notes} = require('../lib/note');
+const {Note, Notes} = require('../lib/note'),
+      {app} = require('electron').remote.require('electron');
 
-let path = `${__dirname}/../../data/notes.json`,
+let path = `${app.getPath('appData')}/HillTopApp/notes.json`,
     notes = new Notes(path);
 
 notes.load();

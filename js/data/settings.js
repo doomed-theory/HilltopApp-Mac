@@ -1,6 +1,10 @@
-const {Settings} = require('../lib').settings;
+const fs = require('fs'),
+      {app} = require('electron').remote.require('electron'),
+      {Settings} = require('../lib').settings;
 
-let settings = new Settings(`${__dirname}/../../data/settings.json`, {
+let path = `${app.getPath('appData')}/HillTopApp/settings.json`;
+
+let settings = new Settings(path/*`${__dirname}/../../data/settings.json`*/, {
   userType: "student"
 });
 

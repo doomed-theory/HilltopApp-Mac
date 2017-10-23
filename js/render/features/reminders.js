@@ -16,7 +16,6 @@
       <form>
         <input class="title" type="text" value="New Reminder">
         <input class="datepicker" type="text">
-        <span class="valid-date-time-label"></span>
       </form>
       <select class="hour">
         ${getNumOptions(1, 12)}
@@ -31,6 +30,7 @@
       </select>
     <button class="set-reminder">Set</button>
     <button class="remove-reminder">Remove</button>
+    <span class="valid-date-time-label"></span>
     </li>`)
     .find('.set-reminder')
     .click(function() {
@@ -54,7 +54,6 @@
         <form>
           <input class="title" type="text" value="${reminder.title}" disabled>
           <input class="datepicker" type="text" value="${reminder.date}" disabled>
-          <span class="valid-date-time-label"></span>
         </form>
         <select class="hour" disabled>
           ${getNumOptions(1, 12)}
@@ -145,13 +144,4 @@
     if (num < 10) return `0${num}`
     else return `${num}`;
   }
-
-  // function saveReminders(reminders, path = './data/reminders.json') {
-  //   let updatedReminders = reminders.reminders.filter(reminder => {
-  //     return reminder.dateTimeMillis - Date.now() >= 0;
-  //   }).map(reminder => {
-  //     return reminder.json;
-  //   });
-  //   fs.writeFileSync(path, JSON.stringify(updatedReminders));
-  // }
 })();

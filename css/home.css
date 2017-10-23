@@ -1,0 +1,22 @@
+#credits {
+  background: rgb(18, 29, 37);
+  color: white;
+  height: 75px;
+  width: 100px;
+  text-align: center;
+  line-height: 75px;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: 1s;
+  cursor: pointer;
+}
+
+#credits:hover {
+  color: rgb(18, 29, 37);
+  background-color: white;
+}
+
+#header h1 {
+  width: calc(100% - 220px);
+}

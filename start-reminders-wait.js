@@ -1,10 +1,13 @@
-const {ipcMain} = require('electron');
+const {ipcMain} = require('electron'),
+      {Reminders, Reminder} = require('./js/lib/reminder'),
+      {app} = require('electron');
 
 module.exports = (app) => {
   app.on('ready', () => {
-    const Reminder = require('./js/lib/reminder').Reminder;
+    let path = `${app.getPath('appData')}/HillTopApp/reminders.json`,
+        reminders = new Reminders(path);
 
-    let reminders = require('./js/data/reminders');
+    reminders.load();
 
     reminders.startWait();
 

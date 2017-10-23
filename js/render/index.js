@@ -1,7 +1,7 @@
 (function() {
   const {shell} = require('electron');
-  window.$ = window.jQuery = require('jquery');
   const globalFunctionality = require('../js/global-functionality');
+  window.$ = window.jQuery = require('jquery');
   globalFunctionality.sticky();
   globalFunctionality.windowController();
   globalFunctionality.keybinds.bind();
@@ -12,5 +12,14 @@
   $('.external').on('click', function(event) {
     event.preventDefault();
     shell.openExternal($(this).attr('href'));
+  });
+  $('#content').prop('hidden', true);
+  $('#content').fadeIn();
+  $('.fade-link').on('click', function(event) {
+    event.preventDefault();
+    let href = this.href;
+    $('#content').fadeOut(() => {
+      window.location = href;
+    });
   });
 })();
