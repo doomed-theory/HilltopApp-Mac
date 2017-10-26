@@ -1,4 +1,4 @@
-const {app, BrowserWindow, ipcMain} = require('electron'),
+const {app, BrowserWindow, ipcMain, Menu} = require('electron'),
       path = require('path'),
       url = require('url');
 
@@ -21,7 +21,7 @@ module.exports = {
       }))
 
       // Open the DevTools.
-       win.webContents.openDevTools()
+      // win.webContents.openDevTools()
 
       // Emitted when the window is closed.
       win.on('closed', () => {
@@ -52,6 +52,14 @@ module.exports = {
       if (win === null) {
         createWindow()
       }
+    });
+
+    app.on('ready', () => {
+      let menuTemplate = [
+        {
+          role: 'editMenu'
+        }
+      ]
     });
 
     // In this file you can include the rest of your app's specific main process

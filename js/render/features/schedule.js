@@ -3,7 +3,8 @@
 
   let $scheduleItemTitles = $('.schedule-item-title'),
       $changeScheduleTitleButtons = $('.change-schedule-title'),
-      schedule = JSON.parse(fs.readFileSync("./data/schedule.json"));
+      schedulePath = `${require('electron').remote.require('electron').app.getPath('appData')}/HillTopApp/schedule.json`,
+      schedule = JSON.parse(fs.readFileSync(schedulePath));
 
   $scheduleItemTitles.each((i, itemTitle) => {
     let $itemTitle = $(itemTitle),
@@ -18,6 +19,6 @@
     let $button = $(this);
 
     schedule[$button.val()] = $($scheduleItemTitles[$button.val()]).val();
-    fs.writeFileSync("./data/schedule.json", JSON.stringify(schedule));
+    fs.writeFileSync(schedulePath, JSON.stringify(schedule));
   });
 })();

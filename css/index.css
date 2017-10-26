@@ -15,8 +15,18 @@ button {
   cursor: pointer;
 }
 
+#logo-container {
+  line-height: 75px;
+}
+
+#logo {
+  vertical-align: middle;
+  display: inline;
+}
+
 #content {
   margin-top: 50px;
+  opacity: 0.85;
 }
 
 #school-name-header {
@@ -126,7 +136,6 @@ button {
   height: 36px;
   -webkit-app-region: no-drag;
   padding: 0;
-  line-height: 0;
 }
 
 #window-controllers button:hover, #help:hover, #settings:hover {
@@ -142,8 +151,6 @@ button {
   border: none;
   transition: 1s;
   padding: 0;
-  -webkit-app-region: no-drag;
-  line-height: 0;
 }
 
 .window-bar-button-separator {
@@ -163,8 +170,6 @@ button {
   transition: 1s;
   padding: 0;
   width: 90px;
-  -webkit-app-region: no-drag;
-  line-height: 0;
 }
 
 #settings-overlay {

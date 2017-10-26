@@ -5,7 +5,8 @@ let dataPath = `${app.getPath('appData')}/HillTopApp`,
     files = {
       settings: `${dataPath}/settings.json`,
       notes: `${dataPath}/notes.json`,
-      reminders: `${dataPath}/reminders.json`
+      reminders: `${dataPath}/reminders.json`,
+      schedule: `${dataPath}/schedule.json`
     };
 
 function checkFile(file, defaultData) {
@@ -23,5 +24,17 @@ module.exports = {
     checkFile(files.settings, {userType: "student"});
     checkFile(files.notes, []);
     checkFile(files.reminders, []);
+    checkFile(files.schedule, [
+      'Before School',
+      'First Period',
+      'Second Period',
+      'Third Period',
+      'Fourth Period',
+      'Fifth Period',
+      'Sixth Period',
+      'Seventh Period',
+      'Eighth Period',
+      'After School',
+    ]);
   }
 }
